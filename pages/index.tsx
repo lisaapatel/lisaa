@@ -57,7 +57,7 @@ const Home: NextPage = () => {
           </h4>
           <ul>
             <li>
-              <strong>Life goal:</strong> Enjoy all of nature's beautiful
+              <strong>Life goal:</strong> Enjoy all of nature&apos;s beautiful
               experiences
             </li>
             <li>
