@@ -26,7 +26,7 @@ export function Navigation({ links, title }: UiProps) {
   return (
     <>
       <nav className="container">
-        <div className="flex h-24 w-full items-center bg-[#1f2937] pr-4 text-white transition-all sm:h-36">
+        <div className="flex h-24 w-full items-center bg-brand pr-4 text-white transition-all sm:h-36">
           <h2 className="flex-1 text-4xl">{title}</h2>
           {/* Desktop Nav */}
           <ul className="hidden sm:flex">
@@ -69,7 +69,7 @@ export function Navigation({ links, title }: UiProps) {
           "flex-col",
           "items-center",
           "sm:hidden",
-          "bg-[#1f2937]",
+          "bg-brand",
           "text-white",
           "transition-all",
           {
