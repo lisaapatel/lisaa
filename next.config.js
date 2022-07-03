@@ -10,6 +10,7 @@ const withMDX = require("@next/mdx")({
 
 const nextConfig = {
   reactStrictMode: true,
+  basePath: process.env.NODE_ENV === "production" ? "lisa-website" : "",
   pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
 };
 
