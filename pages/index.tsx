@@ -8,10 +8,7 @@ const Home: NextPage = () => {
     <>
       <Section type="light">
         <div className="container">
-          <TextBlock
-            header="Hey 👋, I'm Lisa"
-            subtext="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-          />
+          <TextBlock header="Hi 👋, I'm Lisa" />
         </div>
       </Section>
       <div className="container mt-4">
@@ -59,23 +56,25 @@ const Home: NextPage = () => {
           </h4>
           <ul>
             <li>
-              <strong>Life goal:</strong> Enjoy all of nature&apos;s beautiful
-              experiences
+              <span className="font-bold">Life goal:</span> Enjoy all of
+              nature&apos;s beautiful experiences
             </li>
             <li>
-              <strong>Learning:</strong> Yoga
+              <span className="font-bold">Learning:</span> Yoga
             </li>
             <li>
-              <strong>Reading:</strong>{" "}
+              <span className="font-bold">Reading:</span>
             </li>
             <li>
-              <strong>Listening to:</strong> Below the Line BY James Beshera
+              <span className="font-bold">Listening:</span> Below the Line BY
+              James Beshera
             </li>
             <li>
-              <strong>Watching:</strong>
+              <span className="font-bold">Watching:</span>
             </li>
             <li>
-              <strong>Celebrating:</strong> & all the little joys in Life!
+              <span className="font-bold">Celebrating:</span> & all the little
+              joys in Life!
             </li>
           </ul>
           <p>Thanks for stopping by!</p>
