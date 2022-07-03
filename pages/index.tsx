@@ -20,7 +20,11 @@ const Home: NextPage = () => {
           className="sm:grid sm:grid-cols-3 sm:gap-14 sm:h-[500px] items-center"
         >
           <div
-            style={{ backgroundImage: "url('/lisa_patel.jpeg')" }}
+            style={{
+              backgroundImage: `url('${
+                process.env.BASE_PATH || ""
+              }/lisa_patel.jpeg')`,
+            }}
             className="bg-no-repeat bg-contain h-full min-h-[300px] mb-6 sm:mb-0 sm:min-h-full"
           />
           <div className="col-span-2">
