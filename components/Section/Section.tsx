@@ -13,10 +13,8 @@ export function Section({ children, type, className = "" }: SectionProps) {
       className={classnames(
         "py-6",
         {
-          "text-white": type === "dark",
-          "bg-black": type === "dark",
-          "bg-white": type === "light",
-          "text-black": type === "light",
+          "bg-[#1f2937] text-white": type === "dark",
+          "bg-white text-[#1f2937]": type === "light",
         },
         className
       )}

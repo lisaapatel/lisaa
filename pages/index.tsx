@@ -3,7 +3,7 @@ import { Layout, Card, Section, TextBlock } from "../components";
 
 const Home: NextPage = () => {
   return (
-    <Layout>
+    <>
       <Section type="light">
         <TextBlock
           header="Hey 👋, I'm Lisa"
@@ -34,7 +34,7 @@ const Home: NextPage = () => {
           ))} */}
         </Section>
       </div>
-    </Layout>
+    </>
   );
 };
 

@@ -1,4 +1,4 @@
-import { Maybe } from "@binoy14/cms-types";
+export type Maybe<T> = T | null | undefined;
 
 export interface TextBlockProps {
   header: string;

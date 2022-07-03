@@ -8,11 +8,11 @@ const links: NavLinks[] = [
   },
   {
     text: "Experience",
-    link: "/experience",
+    link: "experience",
   },
   {
     text: "Projects",
-    link: "/projects",
+    link: "projects",
   },
 ];
 

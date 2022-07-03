@@ -2,6 +2,7 @@ import "../styles/global.css";
 
 import type { AppProps } from "next/app";
 import Head from "next/head";
+import { Layout } from "../components";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -9,9 +10,9 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Head>
         <title>Lisa Patel</title>
       </Head>
-      <div>
+      <Layout>
         <Component {...pageProps} />
-      </div>
+      </Layout>
     </>
   );
 }
