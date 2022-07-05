@@ -109,7 +109,7 @@ const Projects = () => {
 
       <div className="container flex flex-wrap justify-center">
         {TABLEAU_PROJECTS.map((p) => (
-          <Card key={p.title} className="m-4 w-80 p-0">
+          <Card key={p.title} className="m-4 w-80 !p-0">
             <img src={p.img} alt={p.title} className="rounded object-contain" />
             <h3 className="text-xl font-bold text-center my-6 mx-4">
               {p.link ? (
