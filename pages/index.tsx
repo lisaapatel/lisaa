@@ -18,7 +18,7 @@ const Home: NextPage = () => {
         >
           <div
             style={{
-              backgroundImage: `url('${process.env.BASE_PATH}/lisa_patel.jpeg')`,
+              backgroundImage: `url(/lisa_patel.jpeg')`,
             }}
             className="bg-no-repeat bg-contain h-full min-h-[300px] mb-6 sm:mb-0 sm:min-h-full"
           />
