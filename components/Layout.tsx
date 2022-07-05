@@ -3,7 +3,7 @@ import React, { ReactNode } from "react";
 
 const links: NavLinks[] = [
   {
-    text: "Home",
+    text: "About",
     link: "",
   },
   {
@@ -13,6 +13,10 @@ const links: NavLinks[] = [
   {
     text: "Projects",
     link: "projects",
+  },
+  {
+    text: "Contact",
+    link: "contact",
   },
 ];
 

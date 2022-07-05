@@ -1,6 +1,4 @@
 import type { NextPage } from "next";
-import { MdEmail } from "react-icons/md";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { Section, TextBlock } from "../components";
 
 const Home: NextPage = () => {
@@ -78,21 +76,6 @@ const Home: NextPage = () => {
             </li>
           </ul>
           <p>Thanks for stopping by!</p>
-        </Section>
-      </div>
-
-      <div className="container">
-        <h2 className="mt-10 text-center text-xl font-bold">Contact Me</h2>
-        <Section type="dark">
-          <p className="text-center">
-            I enjoy meeting new people and collaborating or even just talking
-            over some good coffee, so please feel free to reach out!
-          </p>
-          <div className="flex justify-center items-center mt-8">
-            <MdEmail size={50} className="mr-5" />
-            <FaGithub size={50} className="mr-5" />
-            <FaLinkedin size={50} />
-          </div>
         </Section>
       </div>
     </>
