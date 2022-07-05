@@ -47,37 +47,39 @@ const Home: NextPage = () => {
         </Section>
       </div>
 
-      <div className="container">
-        <Section type="dark">
-          <h4 className="text-lg font-bold mb-4">
-            A peek into my life right now
-          </h4>
-          <ul>
-            <li>
-              <span className="font-bold">Life goal:</span> Enjoy all of
-              nature&apos;s beautiful experiences
-            </li>
-            <li>
-              <span className="font-bold">Learning:</span> Yoga
-            </li>
-            <li>
-              <span className="font-bold">Reading:</span>
-            </li>
-            <li>
-              <span className="font-bold">Listening:</span> Below the Line BY
-              James Beshera
-            </li>
-            <li>
-              <span className="font-bold">Watching:</span>
-            </li>
-            <li>
-              <span className="font-bold">Celebrating:</span> & all the little
-              joys in Life!
-            </li>
-          </ul>
-          <p>Thanks for stopping by!</p>
-        </Section>
-      </div>
+      <Section type="dark">
+        <div className="container sm:grid sm:grid-cols-3 sm:gap-14">
+          <div className="sm:col-span-2 sm:col-start-2">
+            <h4 className="text-lg font-bold mb-4">
+              A peek into my life right now
+            </h4>
+            <ul>
+              <li>
+                <span className="font-bold">Life goal:</span> Enjoy all of
+                nature&apos;s beautiful experiences
+              </li>
+              <li>
+                <span className="font-bold">Learning:</span> Yoga
+              </li>
+              <li>
+                <span className="font-bold">Reading:</span>
+              </li>
+              <li>
+                <span className="font-bold">Listening:</span> Below the Line BY
+                James Beshera
+              </li>
+              <li>
+                <span className="font-bold">Watching:</span>
+              </li>
+              <li>
+                <span className="font-bold">Celebrating:</span> & all the little
+                joys in Life!
+              </li>
+            </ul>
+            <p>Thanks for stopping by!</p>
+          </div>
+        </div>
+      </Section>
     </>
   );
 };

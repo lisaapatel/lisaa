@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import { Section } from "../components";
+import { Section, TextBlock } from "../components";
 
 const EXPERIENCES = [
   {
@@ -53,6 +53,7 @@ const Experience: NextPage = () => {
   return (
     <Section type="light">
       <div className="container">
+        <h3 className="text-3xl font-bold my-4">Work</h3>
         {EXPERIENCES.map((e) => (
           <div className="mb-6 last:border-b-0 border-b-2 pb-6" key={e.company}>
             <div className="mb-4 flex flex-col sm:flex-row justify-between items-start sm:items-center">
@@ -72,6 +73,22 @@ const Experience: NextPage = () => {
             </ul>
           </div>
         ))}
+        <h3 className="text-3xl font-bold my-4">Education</h3>
+        <div className="flex flex-cols sm:flex-row justify-between items-center">
+          <TextBlock
+            header="Master of Science in Information Systems"
+            subtext="Santa Clara University, Leavey School of Business"
+          />
+          <span className="font-bold">2021</span>
+        </div>
+
+        <div className="flex flex-cols sm:flex-row justify-between items-center">
+          <TextBlock
+            header="Bachelor of Engineering in Information and Communication Technology"
+            subtext="Gujarat Technological University"
+          />
+          <span className="font-bold">2019</span>
+        </div>
       </div>
     </Section>
   );
