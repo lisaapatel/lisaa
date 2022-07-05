@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import { Section } from "../components";
 
 const EXPERIENCES = [
   {
@@ -9,7 +10,7 @@ const EXPERIENCES = [
     body: [
       "Created BI reports enabling transparent and fast insights into business metrics, including operational efficiency, financial health and bug reporting.",
       "Built data dashboards that measure company performance + player resonance",
-      "Guided future product strategy by discovering insights into player behaviour",
+      "Guided future product strategy by discovering insights into player behavior",
       "Improving operational excellence by learning insights into product quality",
       "Informing business strategy with insights about competitors and the market landscape",
     ],
@@ -50,27 +51,29 @@ const EXPERIENCES = [
 
 const Experience: NextPage = () => {
   return (
-    <div className="container">
-      {EXPERIENCES.map((e) => (
-        <div className="mb-6 border-b pb-6" key={e.company}>
-          <div className="mb-4 flex justify-between items-center">
-            <h3 className="text-xl font-bold flex flex-col">
-              <span>{e.title}</span>
-              <span>{e.company}</span>
-            </h3>
-            <h3 className="text-lg flex flex-col items-end">
-              <span>{e.timeRange}</span>
-              <span>{e.location}</span>
-            </h3>
+    <Section type="light">
+      <div className="container">
+        {EXPERIENCES.map((e) => (
+          <div className="mb-6 last:border-b-0 border-b-2 pb-6" key={e.company}>
+            <div className="mb-4 flex flex-col sm:flex-row justify-between items-start sm:items-center">
+              <h3 className="text-xl font-bold flex flex-col mb-2 sm:mb-0">
+                <span>{e.title}</span>
+                <span>{e.company}</span>
+              </h3>
+              <h3 className="text-lg flex flex-col items-start sm:items-end">
+                <span>{e.timeRange}</span>
+                <span>{e.location}</span>
+              </h3>
+            </div>
+            <ul className="list-disc ml-4">
+              {e.body.map((b, i) => (
+                <li key={i}>{b}</li>
+              ))}
+            </ul>
           </div>
-          <ul className="list-disc ml-4">
-            {e.body.map((b, i) => (
-              <li key={i}>{b}</li>
-            ))}
-          </ul>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
+    </Section>
   );
 };
 
