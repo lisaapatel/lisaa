@@ -12,7 +12,7 @@ const Home: NextPage = () => {
       <div className="container mt-4">
         <Section
           type="dark"
-          className="sm:grid sm:grid-cols-3 sm:gap-14 sm:h-[500px] items-center"
+          className="sm:grid sm:grid-cols-3 sm:gap-14 sm:min-h-[500px] items-center"
         >
           <div
             style={{
