@@ -79,11 +79,11 @@ const Home: NextPage = () => {
                 Questions, Below the Line by James Beshera James Beshera
               </li>
               <li>
-                <span className="font-bold">Watching:</span>
+                <span className="font-bold">Watching:</span>We crashed, Ozark
               </li>
               <li>
-                <span className="font-bold">Celebrating:</span>Friends reunion &
-                all the little joys in Life!
+                <span className="font-bold">Celebrating:</span>Highschool
+                friends reunion & all the little joys in Life!
               </li>
             </ul>
             <p>Thanks for stopping by!</p>
