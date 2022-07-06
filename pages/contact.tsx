@@ -27,7 +27,7 @@ const LINKS = [
   },
   {
     icon: FaFile,
-    link: "",
+    link: "https://drive.google.com/file/d/1ZMFkTSLvxA1lSpF5tMa0iZjD5kby_XI7/view?usp=sharing",
   },
 ];
 
