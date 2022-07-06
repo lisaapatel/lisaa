@@ -114,7 +114,23 @@ const Experience: NextPage = () => {
               header="Master of Science in Information Systems"
               subtext="Santa Clara University, Leavey School of Business"
             />
-            <span>Enter text here</span>
+            <i>
+              <span>
+                Coursework: Data Science with Python, Machine Learning, NLP,
+                Database Management, Cloud Computing, Info. Systems Analysis &
+                Design, Object Oriented Analysis -Java, Database Analysis &
+                Modeling, Data Warehousing, Digital Strategies & Policies,
+                Software Project Management, Women in Leadership
+              </span>
+            </i>
+            <p>
+              <i>
+                <span>
+                  Activities : Grace Hopper Celebration, Rewriting the Code,
+                  Women In Product, Product Buds
+                </span>
+              </i>
+            </p>
           </div>
           <span className="font-bold">2021</span>
         </div>
@@ -125,9 +141,38 @@ const Experience: NextPage = () => {
               header="Bachelor of Engineering in Information and Communication Technology"
               subtext="Gujarat Technological University"
             />
-            <span>Enter Text Here</span>
+            <i>
+              <span>
+                Coursework: Software Engineering, Adv. Computer Networks, Data
+                Structures, Operating Systems
+              </span>
+            </i>
+            <p>
+              <i>
+                <span>Activities : Lumina, LJ Prayas, LJ Tech fest</span>
+              </i>
+            </p>
           </div>
           <span className="font-bold">2019</span>
+        </div>
+        <div className="flex flex-cols sm:flex-row justify-between items-center">
+          <div>
+            <br></br>
+            <p>
+              <b>Product School</b>:{" "}
+              <a href="https://drive.google.com/file/d/1RwyfV5OnrZhhmykiD5OktQ44rHQgPUom/view">
+                <u>Product Analytics</u>
+              </a>
+            </p>
+            <i>
+              <span>
+                Coursework: Web Analytics, Intro to SQL, Advance SQL, Data
+                Visualization, Understanding Data & Statistics, Intro to Machine
+                Learning, Data Visualization & Big Data, Capstone
+              </span>
+            </i>
+          </div>
+          <span className="font-bold"></span>
         </div>
       </div>
     </Section>

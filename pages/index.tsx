@@ -40,7 +40,13 @@ const Home: NextPage = () => {
             <p className="my-4">
               You can also catch me binge-watching on Netflix, daydreaming,
               baking, trying out new recipes or blogging about my travels and
-              experiences. You can find my blog here.
+              experiences. You can find my blog{" "}
+              <a href="https://www.instagram.com/thehattales/">
+                <u>
+                  <i>here</i>
+                </u>
+              </a>
+              .
             </p>
             <p className="my-4">
               Besides this, I am also interested in smart mobility, and
