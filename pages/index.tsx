@@ -26,13 +26,7 @@ const Home: NextPage = () => {
             </h2>
             <h4 className="text-lg font-bold">Nice to e-meet you!</h4>
             <p className="my-4">
-              Currently working in the gaming world at a start-up called Blitz.
-              I help different teams in making impactful data-driven decisions.
-              My passion revolves around three core tenets: strategy, analytics,
-              and innovation. I am an avid learner who enjoys exciting
-              challenges. I presume it is to accept what life throws at me and
-              mould it in the best possible way while enjoying small wins on the
-              way.
+            I am an SCU alumnus with a Master's in Information Systems, currently based out of the Bay Area. I am passionate about using the data to help and build better products for the users. Currently working in the gaming world at a start-up called Blitz, I help different teams in making impactful data-driven decisions. My passion revolves around three core tenets: strategy, analytics, and innovation. I am an avid learner who enjoys exciting challenges. I presume it is to accept what life throws at me and mould it in the best possible way while enjoying small wins on the way.
             </p>
             <p className="my-4">
               You can also catch me binge-watching on Netflix, daydreaming,
@@ -55,24 +49,23 @@ const Home: NextPage = () => {
             </h4>
             <ul>
               <li>
-                <span className="font-bold">Life goal:</span> Enjoy all of
-                nature&apos;s beautiful experiences
+                <span className="font-bold">Life goal:</span> Enjoy all of nature's beautiful experiences
               </li>
               <li>
                 <span className="font-bold">Learning:</span> Yoga
               </li>
               <li>
-                <span className="font-bold">Reading:</span>
+                <span className="font-bold">Reading:</span>  Atomic habits by James Clear, Hacking Growth by Sean Ellis
               </li>
               <li>
-                <span className="font-bold">Listening:</span> Below the Line BY
+                <span className="font-bold">Listening:</span> No Stupid Questions, Below the Line by James Beshera
                 James Beshera
               </li>
               <li>
                 <span className="font-bold">Watching:</span>
               </li>
               <li>
-                <span className="font-bold">Celebrating:</span> & all the little
+                <span className="font-bold">Celebrating:</span>Friends reunion & all the little
                 joys in Life!
               </li>
             </ul>

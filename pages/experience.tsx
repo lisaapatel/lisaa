@@ -12,7 +12,8 @@ const EXPERIENCES = [
         title: "Platform Analytics",
         body: [
           "Performed acquisition and behavioral cohort analysis, and created dashboards to track early retention issues and user churn trends.",
-          "Using SQL, Databricks & Tableau built comprehensive reporting pipelines for trackings insights and trends in user growth which resulted in easy-of-use tracking in overall company performance.",
+          "Built comprehensive reporting pipelines for trackings insights and trends in user growth which resulted in easy-of-use tracking in overall company performance."
+
         ],
       },
       {
@@ -24,8 +25,15 @@ const EXPERIENCES = [
       },
       "<strong>Marketing Analytics</strong>: Designed KPIs for understanding Ad revenue in correlation to user journey, provided reports informing Ad touchpoints and placements ensuring marketing campaign success.",
       "<strong>Product Sales Analytics</strong>: Designed interfaces to provide real-time overview of key business metrics and revenue helping depict the overall health of the product offering.",
-      "<strong>Data Engineering</strong>: Transformed and processed raw data for historic back-fills and automated daily events. Orchestrated a combination of notebooks, SQL, Spark to build ETL pipelines across large game player data sets (~100m new rows daily) to trigger daily workflows.",
-    ],
+      {
+        title: "Data Engineering",
+        body: [
+          "Transformed and processed raw data for historic back-fills and automated daily events. Orchestrated a combination of notebooks, SQL, Spark to build ETL pipelines across large game player data sets (~100m new rows daily) to trigger daily workflows.",
+          "Worked with partner teams on different tech stack such as SQL, Databricks, Tableau, Spark, Snowflake, Python to solve an array of problems."
+
+        ],
+      }
+   ],
   },
   {
     company: "Okta, Inc.",
