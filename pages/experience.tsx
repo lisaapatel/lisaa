@@ -12,8 +12,7 @@ const EXPERIENCES = [
         title: "Platform Analytics",
         body: [
           "Performed acquisition and behavioral cohort analysis, and created dashboards to track early retention issues and user churn trends.",
-          "Built comprehensive reporting pipelines for trackings insights and trends in user growth which resulted in easy-of-use tracking in overall company performance."
-
+          "Built comprehensive reporting pipelines for trackings insights and trends in user growth which resulted in easy-of-use tracking in overall company performance.",
         ],
       },
       {
@@ -29,11 +28,10 @@ const EXPERIENCES = [
         title: "Data Engineering",
         body: [
           "Transformed and processed raw data for historic back-fills and automated daily events. Orchestrated a combination of notebooks, SQL, Spark to build ETL pipelines across large game player data sets (~100m new rows daily) to trigger daily workflows.",
-          "Worked with partner teams on different tech stack such as SQL, Databricks, Tableau, Spark, Snowflake, Python to solve an array of problems."
-
+          "Worked with partner teams on different tech stack such as SQL, Databricks, Tableau, Spark, Snowflake, Python to solve an array of problems.",
         ],
-      }
-   ],
+      },
+    ],
   },
   {
     company: "Okta, Inc.",
@@ -111,18 +109,24 @@ const Experience: NextPage = () => {
         ))}
         <h3 className="text-3xl font-bold my-4">Education</h3>
         <div className="flex flex-cols sm:flex-row justify-between items-center">
-          <TextBlock
-            header="Master of Science in Information Systems"
-            subtext="Santa Clara University, Leavey School of Business"
-          />
+          <div>
+            <TextBlock
+              header="Master of Science in Information Systems"
+              subtext="Santa Clara University, Leavey School of Business"
+            />
+            <span>Enter text here</span>
+          </div>
           <span className="font-bold">2021</span>
         </div>
 
         <div className="flex flex-cols sm:flex-row justify-between items-center">
-          <TextBlock
-            header="Bachelor of Engineering in Information and Communication Technology"
-            subtext="Gujarat Technological University"
-          />
+          <div>
+            <TextBlock
+              header="Bachelor of Engineering in Information and Communication Technology"
+              subtext="Gujarat Technological University"
+            />
+            <span>Enter Text Here</span>
+          </div>
           <span className="font-bold">2019</span>
         </div>
       </div>
