@@ -3,6 +3,16 @@ import { Section, TextBlock } from "../components";
 
 const EXPERIENCES = [
   {
+    company: "Upgrade, Inc.",
+    title: "Product Analyst",
+    timePeriod: "Aug 2022 - Present",
+    location: "San Francisco, CA",
+    body: [
+      "Streamling customer experience by creating new features. Assisting in vendor selection, defining product specification by working cross-funtioncaly with the engineering and product team.",
+      "Leading analysis/reporting for Home improvement loans; defining metrics, data models, automating reports for tracking product health and improving overall user experience.",
+    ],
+  },
+  {
     company: "Blitz App, Inc.",
     title: "Product Data Analyst",
     timePeriod: "Sept 2021 - July 2022",
