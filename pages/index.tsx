@@ -29,13 +29,18 @@ const Home: NextPage = () => {
               I am an SCU alumnus with a Master&apos;s in Information Systems,
               currently based out of the Bay Area. I am passionate about using
               the data to help and build better products for the users.
-              Currently working at a fintech unicorn start-up Upgrade, Inc., I
-              help different teams in making impactful data-driven decisions. My
-              passion revolves around three core tenets: strategy, analytics,
-              and innovation. I am an avid learner who enjoys exciting
-              challenges. I presume it is to accept what life throws at me and
-              mould it in the best possible way while enjoying small wins on the
-              way.
+              Currently working at a fintech unicorn start-up{" "}
+              <a href="https://www.upgrade.com">
+                <u>
+                  <i>Upgrade</i>
+                </u>
+              </a>
+              , I help different teams in making impactful data-driven
+              decisions. My passion revolves around three core tenets: strategy,
+              analytics, and innovation. I am an avid learner who enjoys
+              exciting challenges. I presume it is to accept what life throws at
+              me and mould it in the best possible way while enjoying small wins
+              on the way.
             </p>
             <p className="my-4">
               You can also catch me binge-watching on Netflix, daydreaming,
