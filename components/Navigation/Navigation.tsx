@@ -4,6 +4,8 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import { MdClose, MdMenu } from "react-icons/md";
+import { FiSun, FiMoon } from "react-icons/fi";
+import { useTheme } from "../../contexts/ThemeContext";
 
 export interface NavLinks {
   text: string;
@@ -18,47 +20,70 @@ export interface UiProps {
 export function Navigation({ links, title }: UiProps) {
   const [navOpen, setNavOpen] = useState(false);
   const { asPath } = useRouter();
+  const { theme, toggleTheme } = useTheme();
 
   const onClick = () => setNavOpen((prev) => !prev);
 
   const linkClasses = classnames("hover:underline", "hover:text-yellow-400");
 
+  // Use these specific dark colors for consistency
+  const darkBgColor = "bg-gray-900"; // Same as Layout's dark bg
+  const darkTextColor = "text-white";
+  
+  // Light mode colors
+  const lightBgColor = "bg-white";
+  const lightTextColor = "text-gray-900";
+
+  const isActive = (path: string) => {
+    return asPath === path 
+      ? "text-accent-light dark:text-accent-dark font-semibold" 
+      : (theme === 'light' ? lightTextColor : darkTextColor) + " hover:text-accent-light dark:hover:text-accent-dark";
+  };
+
   return (
     <>
-      <nav className="container">
-        <div className="flex h-24 w-full items-center bg-brand text-white transition-all sm:h-36">
-          <h2 className="flex-1 text-4xl">{title}</h2>
-          {/* Desktop Nav */}
-          <ul className="hidden sm:flex">
-            {links.map((navLink) => {
-              const { text, link } = navLink;
-              const href = `/${link}`;
+      <nav className="sticky top-0 z-50 backdrop-filter backdrop-blur-sm bg-opacity-90 dark:bg-opacity-90">
+        <div className="container">
+          <div className={`flex h-20 w-full items-center transition-colors duration-300 sm:h-24 ${
+            theme === 'light' 
+              ? lightBgColor + ' ' + lightTextColor
+              : darkBgColor + ' ' + darkTextColor
+          }`}>
+            <h2 className="flex-1 text-2xl sm:text-3xl font-bold tracking-tight">{title}</h2>
+            <div className="hidden sm:block">
+              <ul className="flex items-center">
+                {links?.map((navLink) => {
+                  const { text, link } = navLink;
+                  const href = `/${link}`;
 
-              return (
-                <li
-                  key={href}
-                  className={classnames(linkClasses, "last:mr-0", "mr-6", {
-                    "text-yellow-400": asPath === href,
-                  })}
-                >
-                  <Link href={href}>
-                    <a>{text}</a>
-                  </Link>
+                  return (
+                    <li key={href} className="px-4">
+                      <Link href={href}>
+                        <a className={`text-base modern-link ${isActive(href)}`}>{text}</a>
+                      </Link>
+                    </li>
+                  );
+                })}
+                <li className="ml-6">
+                  <button
+                    onClick={toggleTheme}
+                    className={`p-2 rounded-full transition-colors ${
+                      theme === 'light'
+                        ? 'hover:bg-gray-100 ' + lightTextColor
+                        : 'hover:bg-gray-800 ' + darkTextColor
+                    }`}
+                    aria-label="Toggle theme"
+                  >
+                    {theme === 'light' ? <FiMoon size={20} /> : <FiSun size={20} />}
+                  </button>
                 </li>
-              );
-            })}
-          </ul>
-          {/* Mobile Nav */}
-          <div className="sm:hidden">
+              </ul>
+            </div>
             <button
-              type="button"
-              className="inline-flex items-center justify-center rounded-md p-2 text-white hover:text-yellow-400"
-              aria-controls="mobile-menu"
-              aria-expanded="false"
               onClick={onClick}
+              className="flex items-center justify-center sm:hidden"
             >
-              <span className="sr-only">Open Main Menu</span>
-              {navOpen ? <MdClose size="24px" /> : <MdMenu size="24px" />}
+              {navOpen ? <MdClose size={24} /> : <MdMenu size={24} />}
             </button>
           </div>
         </div>
@@ -69,12 +94,13 @@ export function Navigation({ links, title }: UiProps) {
           "flex-col",
           "items-center",
           "sm:hidden",
-          "bg-brand",
-          "text-white",
           "transition-all",
+          theme === 'light'
+            ? lightBgColor + ' ' + lightTextColor
+            : darkBgColor + ' ' + darkTextColor,
           {
-            "max-h-52": navOpen === true,
-            "pb-4": navOpen === true,
+            "max-h-60": navOpen === true,
+            "pb-6": navOpen === true,
             "max-h-0": navOpen === false,
           }
         )}
@@ -85,9 +111,9 @@ export function Navigation({ links, title }: UiProps) {
             const href = `/${link}`;
 
             return (
-              <li key={href} className={`mb-6 ${linkClasses}`}>
+              <li key={href} className={`py-3 ${linkClasses} ${isActive(href)}`}>
                 <Link href={href}>
-                  <a className="text-xl">{text}</a>
+                  <a className="text-lg">{text}</a>
                 </Link>
               </li>
             );

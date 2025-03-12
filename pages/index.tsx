@@ -1,73 +1,71 @@
 import type { NextPage } from "next";
-import { Section, TextBlock } from "../components";
+import { Section } from "../components";
+import { useTheme } from "../contexts/ThemeContext";
 
 const Home: NextPage = () => {
+  const { theme } = useTheme();
+  
+  // Consistent color variables
+  const bgColor = theme === 'dark' ? 'bg-gray-900' : 'bg-white';
+  const textColor = theme === 'dark' ? 'text-white' : 'text-gray-900';
+  const textColorSecondary = theme === 'dark' ? 'text-gray-300' : 'text-gray-600';
+  
   return (
-    <>
+    <div className={`${bgColor} ${textColor} transition-colors duration-300`}>
       <Section type="light">
-        <div className="container">
-          <TextBlock header="Hi 👋, I'm Lisa" />
-        </div>
-      </Section>
-      <div className="container mt-4">
-        <Section
-          type="dark"
-          className="sm:grid sm:grid-cols-3 sm:gap-14 sm:min-h-[500px] items-center"
-        >
-          <div
-            style={{
-              backgroundImage: `url('/lisa_patel.jpeg')`,
-            }}
-            className="bg-no-repeat bg-contain h-full min-h-[300px] mb-6 sm:mb-0 sm:min-h-full"
-          />
-          <div className="col-span-2">
-            <h2 className="mb-5 text-2xl font-bold">
+        <div className="container max-w-4xl mx-auto">
+          <div className="mb-20">
+            <h2 className="page-title">
               Welcome to my corner on the internet.
             </h2>
-            <h4 className="text-lg font-bold">Nice to e-meet you!</h4>
-            <p className="my-4">
+            <h3 className="text-2xl text-gray-500 dark:text-gray-300 font-light">
+              Nice to e-meet you!
+            </h3>
+          </div>
+          
+          <div className="space-y-8">
+            <p className={`body-text ${textColorSecondary}`}>
               I am an SCU alumnus with a Master&apos;s in Information Systems,
               currently based out of the Bay Area. I am passionate about using
-              the data to help and build better products for the users.
+              the data to help and build better products for users.
               Currently working at a fintech unicorn start-up{" "}
-              <a href="https://www.upgrade.com">
-                <u>
-                  <i>Upgrade</i>
-                </u>
+              <a 
+                href="https://www.upgrade.com" 
+                className={`modern-link ${theme === 'dark' ? 'text-blue-400' : 'text-blue-600'}`}
+              >
+                Upgrade
               </a>
-              , I help different teams in making impactful data-driven
-              decisions. My passion revolves around three core tenets: strategy,
-              analytics, and innovation. I am an avid learner who enjoys
-              exciting challenges. I presume it is to accept what life throws at
-              me and mould it in the best possible way while enjoying small wins
-              on the way.
+              , I help different teams in making impactful data-driven decisions.
             </p>
-            <p className="my-4">
+            
+            <p className={`body-text ${textColorSecondary}`}>
+              My passion revolves around three core tenets: strategy, analytics, and innovation. I am an avid learner who enjoys
+              exciting challenges. I presume it is to accept what life throws at me and mould it in the best possible way while enjoying small wins on the way.
+            </p>
+            
+            <p className={`body-text ${textColorSecondary}`}>
               You can also catch me binge-watching on Netflix, daydreaming,
               baking, trying out new recipes or blogging about my travels and
               experiences. You can find my blog{" "}
-              <a href="https://www.instagram.com/thehattales/">
-                <u>
-                  <i>here</i>
-                </u>
-              </a>
-              .
+              <a 
+                href="https://www.instagram.com/thehattales/" 
+                className={`modern-link ${theme === 'dark' ? 'text-blue-400' : 'text-blue-600'}`}
+              >
+                here
+              </a>.
             </p>
-            <p className="my-4">
+            
+            <p className={`body-text ${textColorSecondary}`}>
               Besides this, I am also interested in smart mobility, and
               sustainability!
             </p>
           </div>
-        </Section>
-      </div>
-
-      <Section type="dark">
-        <div className="container sm:grid sm:grid-cols-3 sm:gap-14">
-          <div className="sm:col-span-2 sm:col-start-2">
-            <h4 className="text-lg font-bold mb-4">
+          
+          <div className="mt-24 mb-8">
+            <h3 className="text-2xl font-bold mb-6 tracking-tight">
               A peek into my life right now
-            </h4>
-            <ul>
+            </h3>
+            <ul className={`space-y-4 ${textColorSecondary}`}>
               <li>
                 <span className="font-bold">Life goal:</span> Enjoy all of
                 nature&apos;s beautiful experiences
@@ -81,7 +79,7 @@ const Home: NextPage = () => {
               </li>
               <li>
                 <span className="font-bold">Listening:</span> No Stupid
-                Questions, Below the Line by James Beshera James Beshera
+                Questions, Below the Line by James Beshera
               </li>
               <li>
                 <span className="font-bold">Watching:</span> The watcher, house
@@ -89,14 +87,14 @@ const Home: NextPage = () => {
               </li>
               <li>
                 <span className="font-bold">Celebrating:</span> Highschool
-                friends reunion & all the little joys in Life!
+                friends reunion &amp; all the little joys in Life!
               </li>
             </ul>
-            <p>Thanks for stopping by!</p>
+            <p className={`mt-8 ${textColorSecondary}`}>Thanks for stopping by!</p>
           </div>
         </div>
       </Section>
-    </>
+    </div>
   );
 };
 
