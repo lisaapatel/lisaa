@@ -15,9 +15,6 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-    defaults:
-      run:
-        working-directory: .
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -29,10 +26,14 @@ jobs:
           cache: 'yarn'
           
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: |
+          yarn install --frozen-lockfile
+          yarn add gh-pages --dev
           
-      - name: Build Next.js
-        run: yarn build && yarn export
+      - name: Build and Export
+        run: |
+          yarn build
+          yarn export
         env:
           NEXT_PUBLIC_BASE_PATH: /lisaa
 
@@ -41,3 +42,4 @@ jobs:
         with:
           folder: out
           token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages  # Deploy to gh-pages branch
