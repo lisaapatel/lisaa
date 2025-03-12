@@ -15,7 +15,6 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     defaults:
       run:
         working-directory: .
@@ -33,14 +32,9 @@ jobs:
         run: yarn install --frozen-lockfile
           
       - name: Build Next.js
-        run: yarn build
+        run: yarn build && yarn export
         env:
           NEXT_PUBLIC_BASE_PATH: /lisaa
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./.next/standalone
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
