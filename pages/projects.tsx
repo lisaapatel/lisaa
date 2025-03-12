@@ -429,7 +429,7 @@ const Projects: NextPage = () => {
           </h2>
           
           <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-300 max-w-3xl mb-6">
-            Here's a collection of projects I worked on during grad school, organized into three sections: Data Science, Data Visualization, and Case Studies. It's a mix of hands-on work and creative problem-solving from that time!
+            Here&apos; a collection of projects I worked on during grad school, organized into three sections: Data Science, Data Visualization, and Case Studies. It's a mix of hands-on work and creative problem-solving from that time!
           </p>
           
           {renderToggleButtons()}

@@ -85,7 +85,7 @@ const Home: NextPage = () => {
           <ul className={`space-y-4 sm:space-y-6 text-base sm:text-lg ${textColorSecondary}`}>
             <li className="flex flex-col sm:flex-row sm:items-start">
               <span className="font-semibold sm:min-w-[120px] sm:mr-4 mb-1 sm:mb-0">Life goal:</span>
-              <span>Enjoy all of nature's beautiful experiences</span>
+              <span>Enjoy all of nature&apos;s beautiful experiences</span>
             </li>
             <li className="flex flex-col sm:flex-row sm:items-start">
               <span className="font-semibold sm:min-w-[120px] sm:mr-4 mb-1 sm:mb-0">Learning:</span>
