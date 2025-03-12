@@ -18,7 +18,6 @@ const Home: NextPage = () => {
         <title>Lisa Patel</title>
         <meta name="description" content="Lisa Patel's Portfolio" />
         <link rel="icon" href={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/favicon.ico`} />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
       </Head>
 
       <main className="max-w-4xl mx-auto px-4 sm:px-6 py-16">
