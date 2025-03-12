@@ -29,7 +29,11 @@ jobs:
         run: yarn install
           
       - name: Build and Export
-        run: NODE_ENV=production yarn build && NODE_ENV=production yarn export
+        run: |
+          yarn build
+          yarn export
+        env:
+          NEXT_PUBLIC_BASE_PATH: /lisaa
         
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
