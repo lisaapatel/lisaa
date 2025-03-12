@@ -411,7 +411,7 @@ const Projects: NextPage = () => {
         <section className="mb-8">
           <h2 className="text-lg font-medium mb-2">Exploration & Creativity</h2>
           <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-400 mb-3 max-w-3xl">
-            This is where I'll be sharing some of my latest experiments, creative projects, and cool finds! First up is an article I recently wrote about building a 0-to-1 web app with Cursor.
+            This is where I&apos;ll be sharing some of my latest experiments, creative projects, and cool finds! First up is an article I recently wrote about building a 0-to-1 web app with Cursor.
           </p>
           
           <a 

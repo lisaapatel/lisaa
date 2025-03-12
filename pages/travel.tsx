@@ -20,7 +20,7 @@ const Travel: NextPage = () => {
         </h1>
         
         <p className="text-sm leading-relaxed mb-10 max-w-3xl">
-          I love exploring new places and cultures! Here's a collection of some of my travel adventures.
+          I love exploring new places and cultures! Here&apos;s a collection of some of my travel adventures.
           My passion for travel has taken me around the world, capturing memories and experiencing diverse cultures.
         </p>
         
