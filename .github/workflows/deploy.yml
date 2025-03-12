@@ -1,30 +1,38 @@
-name: Deploy to github pages
+name: Deploy to GitHub Pages
 
 on:
   push:
     branches:
       - main
 
+permissions:
+  contents: write
+
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
-
+    defaults:
+      run:
+        working-directory: ./lisaap
     steps:
-      - uses: actions/checkout@v3
-
-      - name: Use Nodejs
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          submodules: 'recursive'
+        
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 16.x
-
-      - name: Install
-        run: yarn
-
-      - name: Build & Export
-        run: NODE_ENV=production yarn export
-
+          node-version: '16'
+          
+      - name: Install dependencies
+        run: yarn install
+          
+      - name: Build and Export
+        run: NODE_ENV=production yarn build && NODE_ENV=production yarn export
+        
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./out
+          publish_dir: ./lisaap/out
