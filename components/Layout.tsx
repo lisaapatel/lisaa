@@ -1,6 +1,7 @@
 import { Navigation } from "./Navigation/Navigation";
 import { useTheme } from "../contexts/ThemeContext";
 import { useEffect, useState } from "react";
+import Head from 'next/head';
 
 const links = [
   {
@@ -27,51 +28,30 @@ const links = [
 
 interface LayoutProps {
   children: React.ReactNode;
+  title?: string;
 }
 
-export function Layout({ children }: LayoutProps) {
-  const [mounted, setMounted] = useState(false);
+export const Layout = ({ children, title = 'Lisa Patel' }: LayoutProps) => {
   const { theme } = useTheme();
   
-  // First useEffect - handle mounting
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-  
-  // Second useEffect - handle theme changes
-  useEffect(() => {
-    if (mounted) {
-      if (theme === 'dark') {
-        document.documentElement.classList.add('dark');
-        document.body.style.backgroundColor = '#111827'; // bg-gray-900
-        document.body.style.color = '#f3f4f6'; // text-gray-100
-      } else {
-        document.documentElement.classList.remove('dark');
-        document.body.style.backgroundColor = '#ffffff'; // white
-        document.body.style.color = '#111827'; // text-gray-900
-      }
-    }
-  }, [theme, mounted]);
-  
-  // Render based on mount state
-  if (!mounted) {
-    return (
-      <div className="min-h-screen">
-        <Navigation links={links} title="Lisa Patel" />
-        <main>{children}</main>
-      </div>
-    );
-  }
-  
-  const bgClass = theme === 'dark' ? 'bg-gray-900' : 'bg-white';
-  const textClass = theme === 'dark' ? 'text-white' : 'text-gray-900';
-  
+  const bgColor = theme === 'dark' ? 'bg-dark-bg' : 'bg-light-bg';
+  const textColor = theme === 'dark' ? 'text-gray-50' : 'text-gray-900';
+
   return (
-    <div className={`min-h-screen ${bgClass} ${textClass} transition-colors duration-200`}>
+    <div className={`min-h-screen ${bgColor} transition-colors duration-300`}>
+      <Head>
+        <title>{title}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
       <Navigation links={links} title="Lisa Patel" />
-      <main className="min-h-screen transition-colors duration-200">{children}</main>
+      
+      <div className={`${textColor}`}>
+        {children}
+      </div>
     </div>
   );
-}
+};
 
 export default Layout;

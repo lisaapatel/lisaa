@@ -5,6 +5,8 @@ import type { NextPage } from "next";
 import { Section } from "../components";
 import Link from "next/link";
 import { FiArrowRight } from "react-icons/fi";
+import Head from 'next/head'
+import { Layout } from "../components/Layout";
 
 // Add interfaces for the project types
 interface Project {
@@ -191,40 +193,35 @@ const Projects: NextPage = () => {
   const [activeCategory, setActiveCategory] = useState<ProjectCategory>("data-science");
   const { theme } = useTheme();
   
-  // Consistent color variables
-  const bgColor = theme === 'dark' ? 'bg-gray-900' : 'bg-white';
-  const textColor = theme === 'dark' ? 'text-white' : 'text-gray-900';
-  const textColorSecondary = theme === 'dark' ? 'text-gray-300' : 'text-gray-600';
-
-  // Simplified category toggle buttons with modern styling
+  // More refined typography, Notion-inspired
   const renderToggleButtons = () => (
-    <div className="flex flex-col sm:flex-row justify-center mb-12 gap-4">
+    <div className="flex flex-wrap justify-center gap-2 mb-8 text-sm">
       <button
         onClick={() => setActiveCategory("data-science")}
-        className={`px-5 py-2.5 rounded-lg transition-all duration-300 ${
+        className={`px-3 py-1 rounded transition-all ${
           activeCategory === "data-science"
-            ? "bg-gradient-to-r from-accent-light to-accent-dark text-white font-medium shadow-md"
-            : `${theme === 'dark' ? 'bg-gray-800 text-white' : 'bg-gray-100 text-gray-800'} hover:shadow-md`
+            ? "bg-blue-600 text-white"
+            : "bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700"
         }`}
       >
         Data Science
       </button>
       <button
         onClick={() => setActiveCategory("tableau")}
-        className={`px-5 py-2.5 rounded-lg transition-all duration-300 ${
+        className={`px-3 py-1 rounded transition-all ${
           activeCategory === "tableau"
-            ? "bg-gradient-to-r from-accent-light to-accent-dark text-white font-medium shadow-md"
-            : `${theme === 'dark' ? 'bg-gray-800 text-white' : 'bg-gray-100 text-gray-800'} hover:shadow-md`
+            ? "bg-blue-600 text-white"
+            : "bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700"
         }`}
       >
         Visualizations
       </button>
       <button
         onClick={() => setActiveCategory("case-studies")}
-        className={`px-5 py-2.5 rounded-lg transition-all duration-300 ${
+        className={`px-3 py-1 rounded transition-all ${
           activeCategory === "case-studies"
-            ? "bg-gradient-to-r from-accent-light to-accent-dark text-white font-medium shadow-md"
-            : `${theme === 'dark' ? 'bg-gray-800 text-white' : 'bg-gray-100 text-gray-800'} hover:shadow-md`
+            ? "bg-blue-600 text-white"
+            : "bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700"
         }`}
       >
         Case Studies
@@ -232,37 +229,38 @@ const Projects: NextPage = () => {
     </div>
   );
 
+  // Refined card design with more elegant typography
   const renderDataScienceProjects = () => (
-    <div className="container grid grid-cols-1 lg:grid-cols-2 gap-8 px-4">
+    <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
       {PROJECTS.map((p: Project) => (
         <Card 
           key={p.title} 
-          className={`bg-${theme === 'dark' ? 'gray-800' : 'gray-100'} rounded-lg shadow-lg p-8 transition-colors`}
+          className="card p-4 sm:p-5"
         >
-          <h3 className="text-2xl font-bold mb-4 dark:text-white">
+          <h3 className="text-base font-medium mb-3 leading-snug">
             {p.link ? (
               <a
                 href={p.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`hover:text-${theme === 'dark' ? 'blue-400' : 'blue-600'}`}
+                className="link-hover"
               >
                 {p.title}
               </a>
             ) : (
-              <>{p.title}</>
+              p.title
             )}
           </h3>
-          <ul className="list-disc ml-6 space-y-2 text-gray-600 dark:text-gray-300 mb-6">
+          <ul className="list-disc pl-4 space-y-1 text-sm text-gray-600 dark:text-gray-400 mb-3">
             {p.body.map((b, i) => (
-              <li key={i}>{b}</li>
+              <li key={i} className="leading-normal">{b}</li>
             ))}
           </ul>
-          <div className="flex flex-wrap gap-2 mt-auto">
+          <div className="flex flex-wrap gap-1 mt-auto">
             {p.technologies.map((tech) => (
               <span
                 key={tech}
-                className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 rounded-full text-sm"
+                className="px-2 py-0.5 text-xs rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300"
               >
                 {tech}
               </span>
@@ -404,46 +402,39 @@ const Projects: NextPage = () => {
   );
 
   return (
-    <div className={`${bgColor} ${textColor} transition-colors duration-300`}>
-      <Section type="light">
-        <div className="container max-w-4xl mx-auto">
-          <h1 className="page-title">Projects + Explorations</h1>
+    <Layout title="Projects - Lisa Patel">
+      <main className="container-custom">
+        <h1 className="text-2xl font-semibold tracking-tight mb-6">
+          Projects + Explorations
+        </h1>
+
+        <section className="mb-8">
+          <h2 className="text-lg font-medium mb-2">Exploration & Creativity</h2>
+          <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-400 mb-3 max-w-3xl">
+            This is where I'll be sharing some of my latest experiments, creative projects, and cool finds! First up is an article I recently wrote about building a 0-to-1 web app with Cursor.
+          </p>
           
-          {/* Exploration & Creativity Section */}
-          <div className="mb-24">
-            <h2 className="section-title">Exploration &amp; Creativity</h2>
-            <p className={`${textColorSecondary} text-center body-text mb-8 max-w-3xl mx-auto`}>
-              This is where I&apos;ll be sharing some of my latest experiments, creative projects, and cool finds! 
-              First up is an article I recently wrote about building a 0-to-1 web app with Cursor. 
-              It&apos;s a quick dive into how I built Spectogo Live in just 2 hours—check it out!
-            </p>
-            
-            <div className="flex justify-center">
-              <a 
-                href="https://medium.com/@lisaapatel/building-a-0to1-web-app-with-cursor-product-spectogo-live-in-2hrs-5de4c9fc03c7" 
-                className="group inline-flex items-center text-blue-500 hover:text-blue-600 transition-colors duration-300"
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <span className="text-lg font-medium mr-2">Read: Building a 0to1 web app with Cursor</span>
-                <FiArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
-              </a>
-            </div>
-          </div>
+          <a 
+            href="#" 
+            className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 text-sm group"
+          >
+            <span>Read: Building a 0to1 web app with Cursor</span>
+            <FiArrowRight className="ml-1 w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+          </a>
+        </section>
+
+        <section>
+          <h2 className="text-lg font-medium mb-2">
+            Previous Projects
+          </h2>
           
-          {/* Previous Projects Introduction */}
-          <div className="mb-16">
-            <h2 className="section-title">Previous Projects</h2>
-            <p className={`${textColorSecondary} text-center body-text mb-12 max-w-3xl mx-auto`}>
-              Here&apos;s a collection of projects I worked on during grad school, organized into three sections: 
-              Data Science, Data Visualization, and Case Studies. It&apos;s a mix of hands-on work and creative 
-              problem-solving from that time!
-            </p>
-            
-            {renderToggleButtons()}
-          </div>
+          <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-300 max-w-3xl mb-6">
+            Here's a collection of projects I worked on during grad school, organized into three sections: Data Science, Data Visualization, and Case Studies. It's a mix of hands-on work and creative problem-solving from that time!
+          </p>
           
-          <h3 className="section-subtitle mb-10">
+          {renderToggleButtons()}
+        
+          <h3 className="text-base font-medium mb-4 text-center">
             {activeCategory === "data-science" && "Data Science Projects"}
             {activeCategory === "tableau" && "Data Visualization Projects"}
             {activeCategory === "case-studies" && "Case Studies"}
@@ -452,9 +443,9 @@ const Projects: NextPage = () => {
           {activeCategory === "data-science" && renderDataScienceProjects()}
           {activeCategory === "tableau" && renderTableauProjects()}
           {activeCategory === "case-studies" && renderCaseStudies()}
-        </div>
-      </Section>
-    </div>
+        </section>
+      </main>
+    </Layout>
   );
 };
 

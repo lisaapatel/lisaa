@@ -1,33 +1,50 @@
 import type { NextPage } from "next";
-import { Section } from "../components";
+import { Layout } from "../components/Layout";
 import { useTheme } from "../contexts/ThemeContext";
+import Head from 'next/head';
 
 const Travel: NextPage = () => {
   const { theme } = useTheme();
-  
-  // Consistent color variables
-  const bgColor = theme === 'dark' ? 'bg-gray-900' : 'bg-white';
-  const textColor = theme === 'dark' ? 'text-white' : 'text-gray-900';
-  const textColorSecondary = theme === 'dark' ? 'text-gray-300' : 'text-gray-600';
+  const textColorSecondary = theme === 'dark' ? 'text-gray-400' : 'text-gray-600';
   
   return (
-    <div className={`${bgColor} ${textColor} transition-colors duration-300`}>
-      <Section type="light">
-        <div className="container max-w-4xl mx-auto">
-          <h1 className="page-title">Travel Recommendations</h1>
-          
-          <div className="my-16">
-            <p className={`body-text ${textColorSecondary} text-lg`}>
-              Coming soon! I&apos;ll be sharing my favorite travel destinations, hidden gems, and travel tips from my 
-              adventures around the world.
-            </p>
-          </div>
-          
-          {/* Placeholder for future travel content */}
-          <div className="min-h-[30vh]"></div>
+    <Layout title="Travel - Lisa Patel">
+      <Head>
+        <title>Travel - Lisa Patel</title>
+        <meta name="description" content="Lisa Patel's travel adventures and experiences" />
+      </Head>
+
+      <main className="max-w-4xl mx-auto px-4 sm:px-6 py-16">
+        <h1 className="text-2xl font-semibold tracking-tight mb-8">
+          Travel
+        </h1>
+        
+        <p className="text-sm leading-relaxed mb-10 max-w-3xl">
+          I love exploring new places and cultures! Here's a collection of some of my travel adventures.
+          My passion for travel has taken me around the world, capturing memories and experiencing diverse cultures.
+        </p>
+        
+        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm mb-12">
+          <h3 className="text-base font-medium mb-2">Food Adventures</h3>
+          <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+            One of the best parts of traveling is experiencing local cuisines. From street food markets in Bangkok to fresh pasta in Italy, food is central to understanding a culture's identity and traditions.
+          </p>
         </div>
-      </Section>
-    </div>
+        
+        <div className="text-center">
+          <p className={`text-sm ${textColorSecondary}`}>
+            Find more travel stories on my <a 
+              href="https://www.instagram.com/thehattales/" 
+              className="text-blue-600 dark:text-blue-400 hover:underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Instagram
+            </a>
+          </p>
+        </div>
+      </main>
+    </Layout>
   );
 };
 

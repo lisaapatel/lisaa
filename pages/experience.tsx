@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
-import { Section } from "../components";
+import { Layout } from "../components/Layout";
 import { useTheme } from "../contexts/ThemeContext";
+import Head from 'next/head';
 
 const EXPERIENCES = [
   {
@@ -45,7 +46,7 @@ const EXPERIENCES = [
   },
   {
     company: "Okta, Inc.",
-    title: "Analyst, Intern",
+    title: "Data Science Analyst, Intern",
     timePeriod: "Mar 2021 - Sept 2021",
     location: "San Francisco, CA",
     description: [
@@ -101,61 +102,99 @@ const EDUCATION = [
 
 const Experience: NextPage = () => {
   const { theme } = useTheme();
-  
-  // Consistent color variables
-  const bgColor = theme === 'dark' ? 'bg-gray-900' : 'bg-white';
-  const textColor = theme === 'dark' ? 'text-white' : 'text-gray-900';
-  const textColorSecondary = theme === 'dark' ? 'text-gray-300' : 'text-gray-600';
-  const cardBg = theme === 'dark' ? 'bg-gray-800' : 'bg-gray-50';
+  const textColorSecondary = theme === 'dark' ? 'text-gray-400' : 'text-gray-600';
   
   return (
-    <div className={`${bgColor} ${textColor} transition-colors duration-300`}>
-      <Section type="light">
-        <div className="container max-w-5xl mx-auto">
-          <h1 className="page-title">Experience</h1>
-          
-          <h2 className="section-subtitle text-left mb-8">Work Experience</h2>
-          <div className="space-y-10 mb-16">
-            {EXPERIENCES.map((exp, i) => (
-              <div key={i} className={`${cardBg} rounded-xl shadow-soft p-6 transition-colors duration-300`}>
-                <div className="mb-4">
-                  <h3 className="card-title">{exp.title}</h3>
-                  <div className="flex flex-col sm:flex-row sm:justify-between">
-                    <p className="font-medium text-accent-light dark:text-accent-dark">{exp.company}</p>
-                    <p className={`${textColorSecondary} small-text mt-1 sm:mt-0`}>{exp.timePeriod} • {exp.location}</p>
-                  </div>
-                </div>
-                <ul className="space-y-2">
-                  {exp.description.map((item, j) => (
-                    <li key={j} className={`${textColorSecondary} body-text`}>• {item}</li>
-                  ))}
-                </ul>
+    <Layout title="Experience - Lisa Patel">
+      <Head>
+        <title>Experience - Lisa Patel</title>
+        <meta name="description" content="Lisa Patel's professional experience" />
+      </Head>
+
+      <main className="max-w-4xl mx-auto px-4 sm:px-6 py-16">
+        <h1 className="text-2xl font-semibold tracking-tight mb-10">
+          Experience
+        </h1>
+        
+        <h2 className="text-xl font-medium text-center mb-12">
+          Work Experience
+        </h2>
+
+        {/* Experience items */}
+        <div className="space-y-12">
+          {/* Upgrade Experience */}
+          <div className="bg-white dark:bg-dark-card shadow-sm rounded-lg p-6">
+            <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+              <div>
+                <h3 className="text-lg font-medium">Product Manager</h3>
+                <a 
+                  href="https://www.upgrade.com" 
+                  className="text-orange-500 hover:text-orange-600 dark:text-orange-400 dark:hover:text-orange-300 font-medium"
+                >
+                  Upgrade, Inc.
+                </a>
               </div>
-            ))}
+              <p className="text-sm mt-2 md:mt-0 md:text-right">
+                Jan 2024 - Present • San Francisco, CA
+              </p>
+            </div>
+            
+            <ul className="space-y-4 text-sm leading-relaxed ml-5 list-disc">
+              <li>
+                Streamlined customer onboarding process by optimizing authentication flow, eliminating unnecessary email verification steps and integrating essential platform links, resulting in 35% faster signups
+              </li>
+              <li>
+                Architected and implemented a comprehensive disputes flow, transforming the existing process by: - Developing a structured workflow with improved reliability and customer support - Creating detailed audit logs for enhanced transparency - Establishing clear documentation for investor insights - Streamlining compliance and troubleshooting processes
+              </li>
+              <li>
+                Developed critical self-service features to enhance customer experience, including hardship enrollment, payment date modifications, and credit limit increases
+              </li>
+            </ul>
           </div>
           
-          <h2 className="text-2xl font-bold mb-8 tracking-tight">Education</h2>
-          <div className="space-y-10">
-            {EDUCATION.map((edu, i) => (
-              <div key={i} className={`${cardBg} rounded-xl shadow-soft p-6 transition-colors duration-300`}>
-                <div className="mb-4">
-                  <h3 className="text-xl font-bold">{edu.degree}</h3>
-                  <div className="flex flex-col sm:flex-row sm:justify-between">
-                    <p className="font-medium text-accent-light dark:text-accent-dark">{edu.institution}</p>
-                    <p className={`${textColorSecondary} text-sm mt-1 sm:mt-0`}>{edu.timePeriod} • {edu.location}</p>
-                  </div>
-                </div>
-                <ul className="space-y-2">
-                  {edu.description.map((item, j) => (
-                    <li key={j} className={`${textColorSecondary}`}>• {item}</li>
-                  ))}
-                </ul>
+          {/* Add other experience items following the same pattern */}
+          {/* You can copy the structure above for each work experience */}
+        </div>
+        
+        <h2 className="text-xl font-medium text-center my-12">
+          Education
+        </h2>
+        
+        {/* Education items with the same styling as work experience */}
+        <div className="space-y-12">
+          <div className="bg-white dark:bg-dark-card shadow-sm rounded-lg p-6">
+            <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+              <div>
+                <h3 className="text-lg font-medium">Master of Science, Information Systems</h3>
+                <p className="font-medium">Santa Clara University</p>
               </div>
-            ))}
+              <p className="text-sm mt-2 md:mt-0 md:text-right">
+                2021 - 2023 • Santa Clara, CA
+              </p>
+            </div>
+            
+            <ul className="space-y-4 text-sm leading-relaxed ml-5 list-disc">
+              <li>
+                Relevant Coursework: Data Visualization, Database Design, Machine Learning, Product Management
+              </li>
+            </ul>
           </div>
         </div>
-      </Section>
-    </div>
+        
+        <div className="mt-16 text-center">
+          <p className={`text-sm ${textColorSecondary}`}>
+            You can also view my experience on <a 
+              href="https://www.linkedin.com/in/lisapatel98" 
+              className="text-blue-600 dark:text-blue-400 hover:underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </a>
+          </p>
+        </div>
+      </main>
+    </Layout>
   );
 };
 
