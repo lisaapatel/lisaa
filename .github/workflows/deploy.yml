@@ -13,8 +13,6 @@ permissions:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -26,9 +24,7 @@ jobs:
           cache: 'yarn'
           
       - name: Install dependencies
-        run: |
-          yarn install --frozen-lockfile
-          yarn add gh-pages --dev
+        run: yarn install --frozen-lockfile
           
       - name: Build and Export
         run: |
@@ -42,4 +38,3 @@ jobs:
         with:
           folder: out
           token: ${{ secrets.GITHUB_TOKEN }}
-          branch: gh-pages  # Deploy to gh-pages branch
