@@ -7,7 +7,9 @@ const nextConfig = {
     unoptimized: true,
   },
   distDir: '.next',
-  basePath: '/lisaa'
+  basePath: '/lisaa',
+  assetPrefix: '/lisaa/',
+  trailingSlash: true,
 };
 
 module.exports = nextConfig;
