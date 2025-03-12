@@ -5,7 +5,9 @@ const nextConfig = {
   output: 'export',
   images: {
     unoptimized: true,
-  }
+  },
+  distDir: '.next',
+  basePath: '/lisaa'
 };
 
 module.exports = nextConfig;
