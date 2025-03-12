@@ -1,79 +1,94 @@
 import type { NextPage } from "next";
-import { FaFile, FaGithub, FaLinkedin, FaMedium } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
-import { IoLogoTableau } from "react-icons/io5";
-import { Section } from "../components";
+import { Layout } from "../components/Layout";
 import { useTheme } from "../contexts/ThemeContext";
-
-const LINKS = [
-  {
-    icon: MdEmail,
-    link: "mailto:lisapatel1998@gmail.com",
-  },
-  {
-    icon: FaGithub,
-    link: "https://github.com/LISAPATEL98",
-  },
-  {
-    icon: FaLinkedin,
-    link: "https://www.linkedin.com/in/lisaapatel",
-  },
-  {
-    icon: IoLogoTableau,
-    link: "https://public.tableau.com/app/profile/lisa7954#!/",
-  },
-  {
-    icon: FaMedium,
-    link: "https://lisaapatel.medium.com/",
-  },
-  {
-    icon: FaFile,
-    link: "https://drive.google.com/file/d/1ZMFkTSLvxA1lSpF5tMa0iZjD5kby_XI7/view?usp=sharing",
-  },
-];
+import Head from 'next/head';
+import { FiMail, FiLinkedin, FiGithub, FiFileText } from "react-icons/fi";
+import { SiMedium } from "react-icons/si";
 
 const Contact: NextPage = () => {
   const { theme } = useTheme();
-  
-  // Consistent color variables
-  const bgColor = theme === 'dark' ? 'bg-gray-900' : 'bg-white';
   const textColor = theme === 'dark' ? 'text-white' : 'text-gray-900';
   
-  // Set appropriate colors for the contact section
-  const sectionBgColor = theme === 'dark' ? 'bg-gray-800' : 'bg-gray-50';
-  const sectionTextColor = theme === 'dark' ? 'text-white' : 'text-gray-800';
-  const iconColor = theme === 'dark' ? 'text-white' : 'text-gray-800';
-  
   return (
-    <div className={`${bgColor} ${textColor} min-h-screen transition-colors duration-300`}>
-      <div className="container py-12">
-        <h1 className="page-title text-center">Contact Me</h1>
+    <Layout title="Contact - Lisa Patel">
+      <Head>
+        <title>Contact - Lisa Patel</title>
+        <meta name="description" content="Get in touch with Lisa Patel" />
+      </Head>
+
+      <main className="max-w-4xl mx-auto px-4 sm:px-6 py-16 flex flex-col items-center justify-center text-center">
+        <h1 className="text-2xl sm:text-3xl font-semibold mb-10">
+          Contact Me
+        </h1>
         
-        <div className={`rounded-2xl shadow-soft-lg py-16 px-8 ${sectionBgColor} transition-colors duration-300 max-w-3xl mx-auto`}>
-          <p className={`text-center body-text mb-12 ${sectionTextColor}`}>
-            I enjoy meeting new people and collaborating or even just talking over
-            some good coffee, so please feel free to reach out!
-          </p>
+        <p className="text-base sm:text-lg mb-12 max-w-2xl">
+          I enjoy meeting new people and collaborating or even just talking over some good coffee, so please feel free to reach out!
+        </p>
+        
+        <div className="flex justify-center items-center space-x-8 mb-12">
+          <a 
+            href="mailto:contact@lisapatel.com" 
+            className="text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            aria-label="Email"
+          >
+            <FiMail className="w-8 h-8" />
+          </a>
           
-          <div className="flex justify-center items-center mt-12 flex-wrap">
-            {LINKS.map(({ link, icon }, i) => {
-              const Comp = icon;
-              return (
-                <a
-                  key={link}
-                  href={link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`mx-5 mb-6 ${iconColor} hover:text-accent-light dark:hover:text-accent-dark transition-colors duration-300 transform hover:scale-110`}
-                >
-                  <Comp size={36} />
-                </a>
-              );
-            })}
-          </div>
+          <a 
+            href="https://github.com/LISAPATEL98" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            aria-label="GitHub"
+          >
+            <FiGithub className="w-8 h-8" />
+          </a>
+          
+          <a 
+            href="https://www.linkedin.com/in/lisapatel98" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            aria-label="LinkedIn"
+          >
+            <FiLinkedin className="w-8 h-8" />
+          </a>
+          
+          <a 
+            href="#" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            aria-label="Personal Site"
+          >
+            <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M16.2399 7.76001L14.1199 14.12L7.75994 16.24L9.87994 9.88001L16.2399 7.76001Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </a>
+          
+          <a 
+            href="#" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            aria-label="Medium"
+          >
+            <SiMedium className="w-8 h-8" />
+          </a>
+          
+          <a 
+            href="#" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            aria-label="Resume"
+          >
+            <FiFileText className="w-8 h-8" />
+          </a>
         </div>
-      </div>
-    </div>
+      </main>
+    </Layout>
   );
 };
 
