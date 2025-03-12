@@ -6,7 +6,6 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  distDir: '.next',
   basePath: '/lisaa',
   assetPrefix: '/lisaa/',
   trailingSlash: true,

@@ -28,8 +28,12 @@ jobs:
       - name: Install dependencies
         run: yarn install
           
+      - name: Clean cache
+        run: yarn cache clean
+          
       - name: Build and Export
         run: |
+          rm -rf .next out
           yarn build
           yarn export
         env:

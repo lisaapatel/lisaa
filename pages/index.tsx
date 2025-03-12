@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import { Section } from "../components";
 import { useTheme } from "../contexts/ThemeContext";
+import Head from 'next/head'
 
 const Home: NextPage = () => {
   const { theme } = useTheme();
@@ -12,6 +13,12 @@ const Home: NextPage = () => {
   
   return (
     <div className={`${bgColor} ${textColor} transition-colors duration-300`}>
+      <Head>
+        <title>Lisa Patel</title>
+        <meta name="description" content="Lisa Patel's Portfolio" />
+        <link rel="icon" href={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/favicon.ico`} />
+      </Head>
+
       <Section type="light">
         <div className="container max-w-4xl mx-auto">
           <div className="mb-20">
