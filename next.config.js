@@ -5,7 +5,7 @@ const nextConfig = {
   reactStrictMode: true,
   output: 'export',
   images: {
-    unoptimized: true,
+    unoptimized: true,  // Disable image optimization for export
   },
   basePath: '/lisaa',
   assetPrefix: '/lisaa/',
