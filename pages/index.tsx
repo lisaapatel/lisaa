@@ -70,14 +70,10 @@ const Home: NextPage = () => {
         </div>
         
         <div className="my-10 sm:my-16 flex justify-center">
-          <Image
-            src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/lisa.jpg`}
+          <img
+            src="/lisa.jpg"
             alt="Lisa Patel"
-            width={400}
-            height={400}
             className="rounded-lg shadow-md w-full max-w-[300px] sm:max-w-[400px]"
-            priority
-            unoptimized={true}
           />
         </div>
         
