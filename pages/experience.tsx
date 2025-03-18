@@ -15,7 +15,7 @@ const EXPERIENCES = [
       "Self-Service Features: Engineered mission-critical self-service features including hardship program enrollment, payment due date modifications, auto-pay enrollment capabilities, and an interactive interest savings calculator, increasing customer satisfaction scores by X% and reducing support ticket volume by X%",
       "Cross-Sell Implementation: Designed and implemented a strategic cross-sell flow that created a new revenue stream and increased products-per-customer metrics company-wide by establishing sophisticated user qualification criteria and directing users to tailored product solutions, resulting in a X% increase in cross-product adoption",
       "Fraud Detection: Partnered with data science team to implement risk-based fraud detection rules, creating an intelligent system that routes suspicious transactions for manual review while maintaining seamless experiences for verified users, reducing fraud losses by X% while preserving conversion rates",
-      "Managed executive reporting, providing critical insights into product performance and strategic opportunities that informed leadership decision-making"
+      "Cross-Functional Alignment: Facilitated seamless collaboration across legal, compliance, engineering, design, operations and sales departments to execute product roadmaps while providing executive-level reporting that ensured stakeholder alignment, accelerated decision-making processes, and optimized resource allocation"
     ],
   },
   {
