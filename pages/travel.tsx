@@ -24,7 +24,7 @@ const Travel: NextPage = () => {
         </p>
 
         <section className="mb-10">
-          <h2 className="text-xl font-semibold mb-4">Food in the Bay Area</h2>
+          <h2 className="text-xl font-semibold mb-4">Food in the Bay</h2>
 
           <h3 className="text-lg font-semibold mb-2">Coffee</h3>
           <p className={`mb-4 ${textColorSecondary}`}>San Francisco: Coffee Movement, Sightglass, Andytown, The Mill, Reveille, Motortig Coffee, Flywheel</p>
