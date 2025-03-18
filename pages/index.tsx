@@ -75,6 +75,7 @@ const Home: NextPage = () => {
             height={400}
             className="rounded-lg shadow-md w-full max-w-[300px] sm:max-w-[400px]"
             priority
+            unoptimized={true}
           />
         </div>
         
