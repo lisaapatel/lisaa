@@ -12,13 +12,14 @@ const links = [
     text: "Experience",
     link: "experience",
   },
-  {
-    text: "Travel",
-    link: "travel",
-  },
+
   {
     text: "Projects + Explorations",
     link: "projects",
+  },
+  {
+    text: "Travel",
+    link: "travel",
   },
   {
     text: "Contact",
