@@ -1,6 +1,6 @@
-import { Navigation } from "./Navigation/Navigation";
-import { useTheme } from "../contexts/ThemeContext";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
+import { Navigation } from './Navigation/Navigation';
+import { useTheme } from '../contexts/ThemeContext';
 import Head from 'next/head';
 
 const links = [
@@ -31,7 +31,7 @@ interface LayoutProps {
   title?: string;
 }
 
-export const Layout = ({ children, title = 'Lisa Patel' }: LayoutProps) => {
+export const Layout: React.FC<LayoutProps> = ({ children, title = 'Lisa Patel' }) => {
   const { theme } = useTheme();
   
   const bgColor = theme === 'dark' ? 'bg-dark-bg' : 'bg-light-bg';
