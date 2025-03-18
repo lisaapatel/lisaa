@@ -27,17 +27,17 @@ const Travel: NextPage = () => {
           <h2 className="text-xl font-semibold mb-4">Food in the Bay</h2>
 
           <h3 className="text-lg font-semibold mb-2">Coffee</h3>
-          <p className={`mb-4 ${textColorSecondary}`}>San Francisco: Coffee Movement, Sightglass, Andytown, The Mill, Reveille, Motortig Coffee, Flywheel</p>
+          <p className={`mb-4 ${textColorSecondary}`}>San Francisco: The Coffee Movement, Sightglass, Andytown, The Mill, Reveille, Motorting Coffee, Flywheel</p>
           <p className={`mb-4 ${textColorSecondary}`}>Palo Alto: Backyard Brews, Ventia Cafe, Coffee Bar</p>
-          <p className={`mb-4 ${textColorSecondary}`}>South Bay: Voyager, Su's Gallery</p>
+          <p className={`mb-4 ${textColorSecondary}`}>South Bay: Voyager, Sue's, 1 Oz coffee</p>
 
           <h3 className="text-lg font-semibold mb-2">Restaurants</h3>
-          <p className={`mb-4 ${textColorSecondary}`}>San Francisco: Flour + Water, State Bird Provisions, Tony's Pizza, Tiya, Copra, Rooh, Shizen, Dumpling Time, Beit Rima</p>
+          <p className={`mb-4 ${textColorSecondary}`}>San Francisco: Flour + Water, State Bird Provisions, Tony's Pizza, Tiya, Copra, Rooh, Shizen, Dumpling Time, Beit Rima, Penny Roma</p>
         </section>
 
         <section>
           <h2 className="text-xl font-semibold mb-4">Travels</h2>
-          <p className={`mb-4 ${textColorSecondary}`}>Beyond the Bay, I&apos;ve had the chance to explore incredible places that have expanded my palate and perspective. Whether it’s savoring street food in Southeast Asia or finding hidden gems in European cities, each journey is a new adventure.</p>
+          <p className={`mb-4 ${textColorSecondary}`}>Beyond the Bay, I&apos;ve had the chance to explore incredible places that have expanded my palate and perspective. Whether itapos;s savoring street food in Southeast Asia or finding hidden gems in European cities, each journey is a new adventure.</p>
         </section>
       </main>
     </Layout>
