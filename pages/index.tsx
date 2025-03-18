@@ -93,19 +93,19 @@ const Home: NextPage = () => {
             </li>
             <li className="flex flex-col sm:flex-row sm:items-start">
               <span className="font-semibold sm:min-w-[120px] sm:mr-4 mb-1 sm:mb-0">Reading:</span>
-              <span>The Midnight library, Hacking Growth by Sean Ellis</span>
+              <span>The Light we Carry by Michelle Obama</span>
             </li>
             <li className="flex flex-col sm:flex-row sm:items-start">
               <span className="font-semibold sm:min-w-[120px] sm:mr-4 mb-1 sm:mb-0">Listening:</span>
-              <span>No Stupid Questions, Below the Line by James Beshera</span>
+              <span>Morning Brew, All-In Podcast, No Stupid Questionsa</span>
             </li>
             <li className="flex flex-col sm:flex-row sm:items-start">
               <span className="font-semibold sm:min-w-[120px] sm:mr-4 mb-1 sm:mb-0">Watching:</span>
-              <span>The watcher, house of dragons</span>
+              <span>Sevrance</span>
             </li>
             <li className="flex flex-col sm:flex-row sm:items-start">
               <span className="font-semibold sm:min-w-[120px] sm:mr-4 mb-1 sm:mb-0">Celebrating:</span>
-              <span>Highschool friends reunion &amp; all the little joys in Life!</span>
+              <span>Highschool Friend's wedding &amp; all the little joys in Life!</span>
             </li>
           </ul>
           <p className={`mt-12 text-lg italic ${textColorSecondary}`}>Thanks for stopping by!</p>

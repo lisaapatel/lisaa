@@ -231,11 +231,11 @@ const Projects: NextPage = () => {
 
   // Refined card design with more elegant typography
   const renderDataScienceProjects = () => (
-    <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+    <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
       {PROJECTS.map((p: Project) => (
         <Card 
           key={p.title} 
-          className="card p-4 sm:p-5 hover:shadow-md transition-shadow duration-300 border border-gray-100 dark:border-gray-700"
+          className="card p-4 sm:p-6 hover:shadow-md transition-shadow duration-300 border border-gray-100 dark:border-gray-700"
         >
           <h3 className="text-base font-medium mb-3 leading-snug">
             {p.link ? (
@@ -285,7 +285,7 @@ const Projects: NextPage = () => {
         </a>
       </h3>
 
-      <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
         {TABLEAU_PROJECTS.map((p) => (
           <Card key={p.title} className={`bg-${theme === 'dark' ? 'gray-800' : 'gray-100'} rounded-lg shadow-lg overflow-hidden`}>
             <img src={p.img} alt={p.title} className="w-full h-48 object-cover" />
@@ -312,7 +312,7 @@ const Projects: NextPage = () => {
   );
 
   const renderCaseStudies = () => (
-    <div className="container grid grid-cols-1 lg:grid-cols-2 gap-8 px-4">
+    <div className="grid grid-cols-1 gap-8">
       {CASE_STUDIES.map((study) => (
         <Card key={study.title} className={`bg-${theme === 'dark' ? 'gray-800' : 'gray-100'} rounded-lg shadow-lg p-8`}>
           <h3 className="text-2xl font-bold mb-4">
