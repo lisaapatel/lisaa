@@ -27,7 +27,12 @@ jobs:
         run: yarn cache clean  # Clear any cached conflicts
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: |
+          if [ ! -f yarn.lock ]; then
+            echo "🚨 yarn.lock not found. Please ensure it exists in the repo.";
+            exit 1;
+          fi
+          yarn install --frozen-lockfile
 
       - name: Verify Next.js Config
         run: cat next.config.js  # Verify the config is correct
