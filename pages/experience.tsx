@@ -21,7 +21,7 @@ const EXPERIENCES = [
   {
     company: "Upgrade, Inc.",
     title: "APM/Product Analyst",
-    timePeriod: "Aug 2022 - Jan2024",
+    timePeriod: "Aug 2022 - Jan 2024",
     location: "San Francisco, CA",
     description: [
       "Streamlining customer experience by creating new features. Assisting in vendor selection, defining product specification by working cross-functionally with the engineering and product team",
@@ -114,7 +114,7 @@ const EDUCATION = [
 const Experience: NextPage = () => {
   const { theme } = useTheme();
   const textColorSecondary = theme === 'dark' ? 'text-gray-400' : 'text-gray-600';
-  
+
   return (
     <Layout title="Experience - Lisa Patel">
       <Head>
@@ -126,86 +126,62 @@ const Experience: NextPage = () => {
         <h1 className="text-2xl font-semibold tracking-tight mb-10">
           Experience
         </h1>
-        
+
         <h2 className="text-xl font-medium text-center mb-12">
           Work Experience
         </h2>
 
-        {/* Experience items */}
         <div className="space-y-12">
-          {/* Upgrade Experience */}
-          <div className="bg-white dark:bg-dark-card shadow-sm rounded-lg p-6">
-            <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
-              <div>
-                <h3 className="text-lg font-medium">Product Manager</h3>
-                <a 
-                  href="https://www.upgrade.com" 
-                  className="text-orange-500 hover:text-orange-600 dark:text-orange-400 dark:hover:text-orange-300 font-medium"
-                >
-                  Upgrade, Inc.
-                </a>
+          {EXPERIENCES.map((experience, index) => (
+            <div key={index} className="bg-white dark:bg-dark-card shadow-sm rounded-lg p-6">
+              <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                <div>
+                  <h3 className="text-lg font-medium">{experience.title}</h3>
+                  <a 
+                    href={`https://${experience.company.toLowerCase().replace(' ', '')}.com`} 
+                    className="text-orange-500 hover:text-orange-600 dark:text-orange-400 dark:hover:text-orange-300 font-medium"
+                  >
+                    {experience.company}
+                  </a>
+                </div>
+                <p className="text-sm mt-2 md:mt-0 md:text-right">
+                  {experience.timePeriod} • {experience.location}
+                </p>
               </div>
-              <p className="text-sm mt-2 md:mt-0 md:text-right">
-                Jan 2024 - Present • San Francisco, CA
-              </p>
+
+              <ul className="space-y-4 text-sm leading-relaxed ml-5 list-disc">
+                {experience.description.map((item, idx) => (
+                  <li key={idx}>{item}</li>
+                ))}
+              </ul>
             </div>
-            
-            <ul className="space-y-4 text-sm leading-relaxed ml-5 list-disc">
-              <li>
-                Streamlined customer onboarding process by optimizing authentication flow, eliminating unnecessary email verification steps and integrating essential platform links, resulting in 35% faster signups
-              </li>
-              <li>
-                Architected and implemented a comprehensive disputes flow, transforming the existing process by: - Developing a structured workflow with improved reliability and customer support - Creating detailed audit logs for enhanced transparency - Establishing clear documentation for investor insights - Streamlining compliance and troubleshooting processes
-              </li>
-              <li>
-                Developed critical self-service features to enhance customer experience, including hardship enrollment, payment date modifications, and credit limit increases
-              </li>
-            </ul>
-          </div>
-          
-          {/* Add other experience items following the same pattern */}
-          {/* You can copy the structure above for each work experience */}
+          ))}
         </div>
-        
+
         <h2 className="text-xl font-medium text-center my-12">
           Education
         </h2>
-        
-        {/* Education items with the same styling as work experience */}
+
         <div className="space-y-12">
-          <div className="bg-white dark:bg-dark-card shadow-sm rounded-lg p-6">
-            <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
-              <div>
-                <h3 className="text-lg font-medium">Master of Science in Information Systems</h3>
-                <p className="font-medium">Santa Clara University, Leavey School of Business</p>
+          {EDUCATION.map((education, index) => (
+            <div key={index} className="bg-white dark:bg-dark-card shadow-sm rounded-lg p-6">
+              <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                <div>
+                  <h3 className="text-lg font-medium">{education.degree}</h3>
+                  <p className="font-medium">{education.institution}</p>
+                </div>
+                <p className="text-sm mt-2 md:mt-0 md:text-right">
+                  {education.timePeriod} • {education.location}
+                </p>
               </div>
-              <p className="text-sm mt-2 md:mt-0 md:text-right">
-                2021 • Santa Clara, CA
-              </p>
+
+              <ul className="space-y-4 text-sm leading-relaxed ml-5 list-disc">
+                {education.description.map((item, idx) => (
+                  <li key={idx}>{item}</li>
+                ))}
+              </ul>
             </div>
-            
-            <ul className="space-y-4 text-sm leading-relaxed ml-5 list-disc">
-              <li>
-                Relevant Coursework: Data Science with Python, Machine Learning, NLP, Database Management, Cloud Computing, Info. Systems Analysis & Design, Object Oriented Analysis -Java, Database Analysis & Modeling, Data Warehousing, Digital Strategies & Policies, Software Project Management, Women in Leadership
-              </li>
-              <li>
-                Activities: Grace Hopper Celebration, Rewriting the Code, Women In Product, Product Buds
-              </li>
-            </ul>
-          </div>
-        </div>
-        
-        <div className="mt-16 text-center">
-          <p className={`text-sm ${textColorSecondary}`}>
-            You can also view my experience on <a 
-              href="https://www.linkedin.com/in/lisapatel98" 
-              className="text-blue-600 dark:text-blue-400 hover:underline"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              LinkedIn
-            </a>
-          </p>
+          ))}
         </div>
       </main>
     </Layout>
