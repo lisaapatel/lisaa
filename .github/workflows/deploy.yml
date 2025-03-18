@@ -3,7 +3,7 @@ name: Deploy Next.js to GitHub Pages
 on:
   push:
     branches:
-      - main  # Trigger on push to the main branch
+      - main  # Adjust if needed
 
 permissions:
   contents: write
@@ -23,8 +23,14 @@ jobs:
           node-version: '18'
           cache: 'yarn'
 
+      - name: Clear Yarn Cache
+        run: yarn cache clean  # Clear any cached conflicts
+
       - name: Install dependencies
         run: yarn install --frozen-lockfile
+
+      - name: Verify Next.js Config
+        run: cat next.config.js  # Verify the config is correct
 
       - name: Build Next.js
         run: yarn build
@@ -40,4 +46,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./out
-          publish_branch: main  # Deploy to main branch; change to 'gh-pages' if preferred
+          publish_branch: main  # Adjust to 'gh-pages' if using a separate branch
