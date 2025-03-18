@@ -55,11 +55,11 @@ const Contact: NextPage = () => {
           </a>
           
           <a 
-            href="#" 
+            href="https://public.tableau.com/app/profile/lisa7954#!/" 
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-            aria-label="Personal Site"
+            aria-label="Tableau"
           >
             <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -68,7 +68,7 @@ const Contact: NextPage = () => {
           </a>
           
           <a 
-            href="#" 
+            href="https://lisaapatel.medium.com/" 
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
