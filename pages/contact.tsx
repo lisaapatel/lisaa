@@ -35,7 +35,7 @@ const Contact: NextPage = () => {
           </a>
           
           <a 
-            href="https://github.com/LISAPATEL98" 
+            href="https://github.com/LISAAPATEL" 
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"

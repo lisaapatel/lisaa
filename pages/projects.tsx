@@ -195,13 +195,13 @@ const Projects: NextPage = () => {
   
   // More refined typography, Notion-inspired
   const renderToggleButtons = () => (
-    <div className="flex flex-wrap justify-center gap-2 mb-8 text-sm">
+    <div className="flex flex-wrap justify-center gap-3 mb-8 text-sm">
       <button
         onClick={() => setActiveCategory("data-science")}
         className={`px-3 py-1 rounded transition-all ${
           activeCategory === "data-science"
-            ? "bg-blue-600 text-white"
-            : "bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700"
+            ? "bg-blue-600 text-white shadow-md"
+            : "bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 hover:shadow-sm"
         }`}
       >
         Data Science
@@ -235,7 +235,7 @@ const Projects: NextPage = () => {
       {PROJECTS.map((p: Project) => (
         <Card 
           key={p.title} 
-          className="card p-4 sm:p-5"
+          className="card p-4 sm:p-5 hover:shadow-md transition-shadow duration-300 border border-gray-100 dark:border-gray-700"
         >
           <h3 className="text-base font-medium mb-3 leading-snug">
             {p.link ? (
@@ -404,19 +404,19 @@ const Projects: NextPage = () => {
   return (
     <Layout title="Projects - Lisa Patel">
       <main className="container-custom">
-        <h1 className="text-2xl font-semibold tracking-tight mb-6">
+        <h1 className="text-3xl font-semibold tracking-tight mb-8 text-center">
           Projects + Explorations
         </h1>
 
         <section className="mb-8">
-          <h2 className="text-lg font-medium mb-2">Exploration & Creativity</h2>
+          <h2 className="text-xl font-medium mb-3 text-gray-800 dark:text-gray-200 border-b border-gray-200 dark:border-gray-700 pb-2">Exploration & Creativity</h2>
           <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-400 mb-3 max-w-3xl">
             This is where I&apos;ll be sharing some of my latest experiments, creative projects, and cool finds! First up is an article I recently wrote about building a 0-to-1 web app with Cursor.
           </p>
           
           <a 
             href="#" 
-            className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 text-sm group"
+            className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 text-sm group font-medium hover:underline"
           >
             <span>Read: Building a 0to1 web app with Cursor</span>
             <FiArrowRight className="ml-1 w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
@@ -424,7 +424,7 @@ const Projects: NextPage = () => {
         </section>
 
         <section>
-          <h2 className="text-lg font-medium mb-2">
+          <h2 className="text-xl font-medium mb-3 text-gray-800 dark:text-gray-200 border-b border-gray-200 dark:border-gray-700 pb-2">
             Previous Projects
           </h2>
           
@@ -434,7 +434,7 @@ const Projects: NextPage = () => {
           
           {renderToggleButtons()}
         
-          <h3 className="text-base font-medium mb-4 text-center">
+          <h3 className="text-lg font-medium mb-6 text-center text-blue-600 dark:text-blue-400">
             {activeCategory === "data-science" && "Data Science Projects"}
             {activeCategory === "tableau" && "Data Visualization Projects"}
             {activeCategory === "case-studies" && "Case Studies"}

@@ -81,23 +81,34 @@ const EXPERIENCES = [
 
 const EDUCATION = [
   {
-    institution: "Santa Clara University",
-    degree: "Master of Science, Information Systems",
-    timePeriod: "2019 - 2021",
+    institution: "Santa Clara University, Leavey School of Business",
+    degree: "Master of Science in Information Systems",
+    timePeriod: "2021",
     location: "Santa Clara, CA",
     description: [
-      "GPA: 3.9/4.0",
-      "Teaching Assistant for Big Data Analysis",
-      "Student Mentor for MSIS Incoming Students",
+      "Coursework: Data Science with Python, Machine Learning, NLP, Database Management, Cloud Computing, Info. Systems Analysis & Design, Object Oriented Analysis -Java, Database Analysis & Modeling, Data Warehousing, Digital Strategies & Policies, Software Project Management, Women in Leadership",
+      "Activities: Grace Hopper Celebration, Rewriting the Code, Women In Product, Product Buds"
     ],
   },
   {
     institution: "Gujarat Technological University",
-    degree: "Bachelor of Engineering, Computer Engineering",
-    timePeriod: "2015 - 2019",
+    degree: "Bachelor of Engineering in Information and Communication Technology",
+    timePeriod: "2019",
     location: "Gujarat, India",
-    description: ["GPA: 9.0/10.0"],
+    description: [
+      "Coursework: Software Engineering, Adv. Computer Networks, Data Structures, Operating Systems",
+      "Activities: Lumina, LJ Prayas, LJ Tech fest"
+    ],
   },
+  {
+    institution: "Product School",
+    degree: "Product Analytics",
+    timePeriod: "",
+    location: "",
+    description: [
+      "Coursework: Web Analytics, Intro to SQL, Advance SQL, Data Visualization, Understanding Data & Statistics, Intro to Machine Learning, Data Visualization & Big Data, Capstone"
+    ],
+  }
 ];
 
 const Experience: NextPage = () => {
@@ -165,17 +176,20 @@ const Experience: NextPage = () => {
           <div className="bg-white dark:bg-dark-card shadow-sm rounded-lg p-6">
             <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
               <div>
-                <h3 className="text-lg font-medium">Master of Science, Information Systems</h3>
-                <p className="font-medium">Santa Clara University</p>
+                <h3 className="text-lg font-medium">Master of Science in Information Systems</h3>
+                <p className="font-medium">Santa Clara University, Leavey School of Business</p>
               </div>
               <p className="text-sm mt-2 md:mt-0 md:text-right">
-                2021 - 2023 • Santa Clara, CA
+                2021 • Santa Clara, CA
               </p>
             </div>
             
             <ul className="space-y-4 text-sm leading-relaxed ml-5 list-disc">
               <li>
-                Relevant Coursework: Data Visualization, Database Design, Machine Learning, Product Management
+                Relevant Coursework: Data Science with Python, Machine Learning, NLP, Database Management, Cloud Computing, Info. Systems Analysis & Design, Object Oriented Analysis -Java, Database Analysis & Modeling, Data Warehousing, Digital Strategies & Policies, Software Project Management, Women in Leadership
+              </li>
+              <li>
+                Activities: Grace Hopper Celebration, Rewriting the Code, Women In Product, Product Buds
               </li>
             </ul>
           </div>
