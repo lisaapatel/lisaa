@@ -12,6 +12,8 @@ const Home: NextPage = () => {
   const textColor = theme === 'dark' ? 'text-gray-100' : 'text-gray-800';
   const textColorSecondary = theme === 'dark' ? 'text-gray-400' : 'text-gray-600';
   
+  console.log("Base path:", process.env.NEXT_PUBLIC_BASE_PATH || '');
+  
   return (
     <Layout title="Lisa Patel">
       <Head>
@@ -69,7 +71,7 @@ const Home: NextPage = () => {
         
         <div className="my-10 sm:my-16 flex justify-center">
           <Image
-            src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/public/lisa_patel.jpeg`}
+            src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/lisa_patel.jpeg`}
             alt="Lisa Patel"
             width={400}
             height={400}

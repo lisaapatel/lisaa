@@ -9,7 +9,8 @@ const nextConfig = {
     unoptimized: true,  // THIS IS CRUCIAL
   },
   basePath: '/lisaa',        // Adjust for your GitHub repository
-  assetPrefix: '/lisaa/',    // Adjust for your GitHub repository
+  assetPrefix: '/lisaa/', 
+  trailingSlash: true,   // Adjust for your GitHub repository
 };
 
 module.exports = nextConfig;
