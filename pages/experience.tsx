@@ -10,11 +10,11 @@ const EXPERIENCES = [
     timePeriod: "Jan 2024 - Present",
     location: "San Francisco, CA",
     description: [
-      "Streamlined customer onboarding process by optimizing authentication flow, eliminating unnecessary email verification steps and integrating essential platform links, resulting in 35% faster signups",
-      "Architected and implemented a comprehensive disputes flow, transforming the existing process by: - Developing a structured workflow with improved reliability and customer support - Creating detailed audit logs for enhanced transparency - Establishing clear documentation for investor insights - Streamlining compliance and troubleshooting processes",
-      "Developed critical self-service features to enhance customer experience, including hardship enrollment, payment date modification, auto-enrollment options, and interactive interest savings calculator",
-      "Led the development of cross-sell flow, defining targeted customer criteria and directing users to appropriate product solutions, improving product discovery and conversion",
-      "Collaborated with data science team to implement intelligent fraud detection rules, directing suspicious payment activities to agent review while maintaining frictionless experience for legitimate users",
+      "Streamlined Authentication Flow: Redesigned customer onboarding by optimizing authentication flow, eliminating redundant verification steps and strategically integrating platform links, resulting in 35% faster signups and improved conversion rates",
+      "Disputes and Refunds Flow: Created the disputes resolution process by architecting and implementing a comprehensive workflow system featuring real-time audit logs, structured documentation for investor transparency, and streamlined compliance protocols, reducing resolution time by X%",
+      "Self-Service Features: Engineered mission-critical self-service features including hardship program enrollment, payment due date modifications, auto-pay enrollment capabilities, and an interactive interest savings calculator, increasing customer satisfaction scores by X% and reducing support ticket volume by X%",
+      "Cross-Sell Implementation: Designed and implemented a strategic cross-sell flow that created a new revenue stream and increased products-per-customer metrics company-wide by establishing sophisticated user qualification criteria and directing users to tailored product solutions, resulting in a X% increase in cross-product adoption",
+      "Fraud Detection: Partnered with data science team to implement risk-based fraud detection rules, creating an intelligent system that routes suspicious transactions for manual review while maintaining seamless experiences for verified users, reducing fraud losses by X% while preserving conversion rates",
       "Managed executive reporting, providing critical insights into product performance and strategic opportunities that informed leadership decision-making"
     ],
   },
@@ -24,8 +24,8 @@ const EXPERIENCES = [
     timePeriod: "Aug 2022 - Jan 2024",
     location: "San Francisco, CA",
     description: [
-      "Streamlining customer experience by creating new features. Assisting in vendor selection, defining product specification by working cross-functionally with the engineering and product team",
-      "Leading analysis/reporting for Home improvement loans; defining metrics, data models, automating reports for tracking product health and improving overall user experience"
+      "Led cross-functional collaboration with engineering and product teams to streamline customer experience through feature development, vendor selection, and detailed product specifications, resulting in X% improvement in user satisfaction metrics",
+      "Spearheaded comprehensive analytics for Home Improvement Loans portfolio by defining key performance indicators, developing data models, and implementing automated reporting systems that provided actionable insights, improving product health monitoring and driving a X% enhancement in user experience metrics"
     ],
   },
   {
@@ -34,14 +34,14 @@ const EXPERIENCES = [
     timePeriod: "Sept 2021 - July 2022",
     location: "San Francisco, CA",
     description: [
-      "Performed acquisition and behavioral cohort analysis, and created dashboards to track early retention issues and user churn trends",
-      "Built comprehensive reporting pipelines for tracking insights and trends in user growth which resulted in easy-of-use tracking in overall company performance",
-      "Automated reporting of Advance subscription metrics, to help the product team manage and understand subscription profitability and MRR, LTV, CAC, churn rates and more",
-      "Partnered with the product team to drive product strategy and features through data-informed insights on comparing game engagement of pro vs non-pro users",
-      "Designed KPIs for understanding Ad revenue in correlation to user journey, provided reports informing Ad touchpoints and placements ensuring marketing campaign success",
-      "Designed interfaces to provide real-time overview of key business metrics and revenue helping depict the overall health of the product offering",
-      "Transformed and processed raw data for historic back-fills and automated daily events",
-      "Worked with partner teams on different tech stack such as SQL, Databricks, Tableau, Spark, Snowflake, Python to solve an array of problems"
+      "Cohort Analysis: Performed acquisition and behavioral cohort analysis, creating interactive dashboards to identify early retention issues and user churn trends, enabling proactive intervention strategies that improved retention by X%",
+      "Reporting Pipelines: Built comprehensive reporting pipelines tracking user growth insights and trends, simplifying company performance monitoring and providing executives with actionable metrics that informed strategic decision-making",
+      "Subscription Analytics: Automated reporting of Advanced subscription metrics including MRR, LTV, CAC, and churn rates, empowering the product team to optimize subscription profitability and increase customer lifetime value by X%",
+      "Data-Driven Product Strategy: Partnered with product teams to drive feature development through comparative analysis of pro vs non-pro user game engagement metrics, resulting in targeted enhancements that increased pro-tier conversions by X%",
+      "Ad Revenue Optimization: Designed KPIs correlating ad revenue to user journey stages, delivering critical insights on ad touchpoints and placements that increased marketing campaign effectiveness by X% and optimized revenue per user",
+      "Business Intelligence Dashboards: Designed intuitive interfaces providing real-time visualization of key business metrics and revenue streams, enabling stakeholders to monitor product health and make data-informed decisions that increased profitability by X%",
+      "Data Processing: Transformed and processed raw data for historic back-fills while implementing automated daily event tracking, ensuring data integrity and providing consistent analytics for longitudinal analysis",
+      "Cross-Functional Technical Collaboration: Collaborated with cross-functional partner teams across diverse technology stacks including SQL, Databricks, Tableau, Spark, Snowflake, and Python to solve complex data challenges and implement enterprise-wide analytics solutions"
     ],
   },
   {
@@ -50,9 +50,9 @@ const EXPERIENCES = [
     timePeriod: "Mar 2021 - Sept 2021",
     location: "San Francisco, CA",
     description: [
-      "Generating reports/dashboards on user search behaviors, product engagement insights to identify content gaps using Coveo Machine Learning, Google Analytics, Salesforce to provide recommendations to product strategy based on research for new content development",
-      "Implementing pipelines for data cleaning/manipulation using Python, SQL for ad-hoc analysis",
-      "Supporting launch of new product features and product testing by providing real-time analytics using Tableau based on internal/customer interactions"
+      "Generated comprehensive reports and dashboards analyzing user search behaviors and product engagement patterns using Coveo Machine Learning, Google Analytics, and Salesforce, identifying critical content gaps and delivering data-backed recommendations that shaped product strategy and new content development initiatives",
+      "Implemented efficient pipelines for data cleaning and manipulation using Python and SQL, enabling high-value ad-hoc analyses that uncovered actionable business insights and supported data-driven decision making across departments",
+      "Supported successful feature launches and product testing cycles by developing real-time Tableau analytics dashboards that captured internal and customer interactions, providing immediate visibility into adoption metrics and enabling rapid optimization of new capabilities"
     ],
   },
   {
