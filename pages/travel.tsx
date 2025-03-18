@@ -24,12 +24,7 @@ const Travel: NextPage = () => {
           My passion for travel has taken me around the world, capturing memories and experiencing diverse cultures.
         </p>
         
-        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm mb-12">
-          <h3 className="text-base font-medium mb-2">Food Adventures</h3>
-          <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-400">
-            One of the best parts of traveling is experiencing local cuisines. From street food markets in Bangkok to fresh pasta in Italy, food is central to understanding a culture&apos;s identity and traditions.
-          </p>
-        </div>
+      
         
         <div className="text-center">
           <p className={`text-sm ${textColorSecondary}`}>

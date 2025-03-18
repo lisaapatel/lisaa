@@ -231,13 +231,13 @@ const Projects: NextPage = () => {
 
   // Refined card design with more elegant typography
   const renderDataScienceProjects = () => (
-    <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+    <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
       {PROJECTS.map((p: Project) => (
         <Card 
           key={p.title} 
-          className="card p-4 sm:p-6 hover:shadow-md transition-shadow duration-300 border border-gray-100 dark:border-gray-700"
+          className="card p-5 sm:p-7 mb-6 hover:shadow-md transition-shadow duration-300 border border-gray-100 dark:border-gray-700"
         >
-          <h3 className="text-base font-medium mb-3 leading-snug">
+          <h3 className="text-base font-medium mb-4 leading-snug">
             {p.link ? (
               <a
                 href={p.link}
@@ -251,12 +251,12 @@ const Projects: NextPage = () => {
               p.title
             )}
           </h3>
-          <ul className="list-disc pl-4 space-y-1 text-sm text-gray-600 dark:text-gray-400 mb-3">
+          <ul className="list-disc pl-4 space-y-2 text-sm text-gray-600 dark:text-gray-400 mb-4">
             {p.body.map((b, i) => (
               <li key={i} className="leading-normal">{b}</li>
             ))}
           </ul>
-          <div className="flex flex-wrap gap-1 mt-auto">
+          <div className="flex flex-wrap gap-2 mt-auto">
             {p.technologies.map((tech) => (
               <span
                 key={tech}
