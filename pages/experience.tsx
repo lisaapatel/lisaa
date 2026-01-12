@@ -4,77 +4,103 @@ import { useTheme } from "../contexts/ThemeContext";
 import Head from 'next/head';
 
 const EXPERIENCES = [
+  // Upgrade PM2
   {
     company: "Upgrade, Inc.",
-    title: "Product Manager",
-    timePeriod: "Jan 2024 - Present",
+    url: "https://www.upgrade.com",
+    title: "Product Manager 2",
+    timePeriod: "June 2025 - Present",
     location: "San Francisco, CA",
     description: [
-      "Streamlined Authentication Flow: Redesigned customer onboarding by optimizing authentication flow, eliminating redundant verification steps and strategically integrating platform links, resulting in 35% faster signups and improved conversion rates",
-      "Disputes and Refunds Flow: Created the disputes resolution process by architecting and implementing a comprehensive workflow system featuring real-time audit logs, structured documentation for investor transparency, and streamlined compliance protocols, reducing resolution time by X%",
-      "Self-Service Features: Engineered mission-critical self-service features including hardship program enrollment, payment due date modifications, auto-pay enrollment capabilities, and an interactive interest savings calculator, increasing customer satisfaction scores by X% and reducing support ticket volume by X%",
-      "Cross-Sell Implementation: Designed and implemented a strategic cross-sell flow that created a new revenue stream and increased products-per-customer metrics company-wide by establishing sophisticated user qualification criteria and directing users to tailored product solutions, resulting in a X% increase in cross-product adoption",
-      "Fraud Detection: Partnered with data science team to implement risk-based fraud detection rules, creating an intelligent system that routes suspicious transactions for manual review while maintaining seamless experiences for verified users, reducing fraud losses by X% while preserving conversion rates",
-      "Cross-Functional Alignment: Facilitated seamless collaboration across legal, compliance, engineering, design, operations and sales departments to execute product roadmaps while providing executive-level reporting that ensured stakeholder alignment, accelerated decision-making processes, and optimized resource allocation"
+      "Cross-Sell Strategy & Execution: Co-led a company-wide cross-sell initiative to convert existing Personal Loan and BNPL customers into Home Improvement Loans by defining customer qualification criteria across credit, behavior, and risk signals, partnering with data science, marketing, and leadership to deliver targeted offers across in-app and lifecycle channels, driving a material increase in products per customer and revenue per user",
+      "Monetization & Partner Enablement: Designed cross-sell flows that route qualified customers to third-party partners while maintaining compliance and risk thresholds, unlocking a new revenue stream and establishing a scalable framework for future product expansion",
+      "OCR-Driven Application Optimization: Led integration of OCR into the loan application funnel to reduce borrower friction and manual entry errors by extracting identity data from government-issued IDs, decreasing application completion time and downstream verification steps while improving data accuracy",
+      "Channel Expansion – Apply by Phone: Owned development of an apply-by-phone experience to expand market reach for less tech-savvy customers, aligning product strategy with competitive landscape and operational constraints to support assisted application flows",
+      "Bidirectional SMS Decisioning: Delivered a secure bidirectional SMS flow enabling customers to approve or decline offers directly via text, reducing funnel friction and abandonment while enforcing fraud checks and eligibility controls at each step",
+      "Roadmap & Executive Collaboration: Influenced shared team roadmap planning by prioritizing high-impact initiatives across growth, risk, and user experience, presenting progress and tradeoffs to VP-level stakeholders and influencing prioritization through end-to-end ownership of initiatives"
     ],
+    
   },
+  // Upgrade PM1
   {
     company: "Upgrade, Inc.",
+    url: "https://www.upgrade.com",
+    title: "Product Manager 1",
+    timePeriod: "Jan 2024 - June 2025",
+    location: "San Francisco, CA",
+    description: [
+      "Streamlined Authentication Flow: Redesigned the customer onboarding experience by simplifying authentication flows, eliminating redundant verification steps, and integrating platform links, resulting in 35% faster signups and improved funnel conversion",
+      "Disputes and Refunds Platform: Owned the design and delivery of a scalable disputes and refunds resolution workflow, introducing real-time audit logs, structured documentation, and compliance-ready processes that materially reduced resolution time and improved investor transparency",
+      "Customer Self-Service Capabilities: Delivered high-impact self-service features including hardship program enrollment, payment due date changes, auto-pay enrollment, and an interactive interest savings calculator, improving customer satisfaction while significantly reducing support ticket volume",
+      "Risk-Based Fraud Detection: Partnered with data science to implement risk-based fraud detection rules that intelligently routed suspicious transactions for manual review, reducing fraud losses while maintaining a frictionless experience for trusted customers",
+      "Cross-Functional Product Execution: Drove alignment across engineering, design, legal, compliance, operations, and sales to execute product initiatives, providing clear stakeholder communication and executive-ready updates that accelerated decision-making and delivery"
+    ],
+  },
+  // Upgrade APM
+  {
+    company: "Upgrade, Inc.",
+    url: "https://www.upgrade.com",
     title: "APM/Product Analyst",
     timePeriod: "Aug 2022 - Jan 2024",
     location: "San Francisco, CA",
     description: [
-      "Led cross-functional collaboration with engineering and product teams to streamline customer experience through feature development, vendor selection, and detailed product specifications, resulting in X% improvement in user satisfaction metrics",
-      "Spearheaded comprehensive analytics for Home Improvement Loans portfolio by defining key performance indicators, developing data models, and implementing automated reporting systems that provided actionable insights, improving product health monitoring and driving a X% enhancement in user experience metrics"
+      "Led cross-functional collaboration with engineering and product teams to streamline customer experience through feature development, vendor selection, and detailed product specifications, resulting in measurable improvements in user satisfaction metrics",
+      "Spearheaded comprehensive analytics for Home Improvement Loans portfolio by defining key performance indicators, developing data models, and implementing automated reporting systems that provided actionable insights, improving product health monitoring and driving better user experience"
     ],
   },
+  // Blitz App
   {
     company: "Blitz App, Inc.",
+    url: "#",
     title: "Product Data Analyst",
     timePeriod: "Sept 2021 - July 2022",
     location: "San Francisco, CA",
     description: [
-      "Cohort Analysis: Performed acquisition and behavioral cohort analysis, creating interactive dashboards to identify early retention issues and user churn trends, enabling proactive intervention strategies that improved retention by X%",
-      "Reporting Pipelines: Built comprehensive reporting pipelines tracking user growth insights and trends, simplifying company performance monitoring and providing executives with actionable metrics that informed strategic decision-making",
-      "Subscription Analytics: Automated reporting of Advanced subscription metrics including MRR, LTV, CAC, and churn rates, empowering the product team to optimize subscription profitability and increase customer lifetime value by X%",
-      "Data-Driven Product Strategy: Partnered with product teams to drive feature development through comparative analysis of pro vs non-pro user game engagement metrics, resulting in targeted enhancements that increased pro-tier conversions by X%",
-      "Ad Revenue Optimization: Designed KPIs correlating ad revenue to user journey stages, delivering critical insights on ad touchpoints and placements that increased marketing campaign effectiveness by X% and optimized revenue per user",
-      "Business Intelligence Dashboards: Designed intuitive interfaces providing real-time visualization of key business metrics and revenue streams, enabling stakeholders to monitor product health and make data-informed decisions that increased profitability by X%",
-      "Data Processing: Transformed and processed raw data for historic back-fills while implementing automated daily event tracking, ensuring data integrity and providing consistent analytics for longitudinal analysis",
-      "Cross-Functional Technical Collaboration: Collaborated with cross-functional partner teams across diverse technology stacks including SQL, Databricks, Tableau, Spark, Snowflake, and Python to solve complex data challenges and implement enterprise-wide analytics solutions"
+      "Cohort Analysis: Analyzed acquisition and behavioral cohorts to identify early retention risks and churn drivers, enabling targeted interventions that improved user retention",
+      "Subscription Analytics: Automated reporting for subscription metrics including MRR, LTV, CAC, and churn, empowering the product team to optimize pricing and increase customer lifetime value",
+      "Data-Driven Product Strategy: Partnered with product teams to compare pro vs non-pro engagement patterns, driving feature improvements that increased pro-tier conversion",
+      "Ad Revenue Optimization: Defined KPIs linking ad revenue to user journey stages, delivering insights that improved ad placement effectiveness and revenue per user",
+      "Executive Reporting & Dashboards: Built executive-facing dashboards that provided real-time visibility into growth and revenue trends, supporting faster and more informed decision-making",
+      "Cross-Functional Analytics Collaboration: Worked across product, engineering, and data teams using SQL, Python, and BI tools to deliver scalable analytics solutions"
     ],
   },
+  // Okta
   {
     company: "Okta, Inc.",
+    url: "#",
     title: "Data Science Analyst, Intern",
     timePeriod: "Mar 2021 - Sept 2021",
     location: "San Francisco, CA",
     description: [
-      "Generated comprehensive reports and dashboards analyzing user search behaviors and product engagement patterns using Coveo Machine Learning, Google Analytics, and Salesforce, identifying critical content gaps and delivering data-backed recommendations that shaped product strategy and new content development initiatives",
-      "Implemented efficient pipelines for data cleaning and manipulation using Python and SQL, enabling high-value ad-hoc analyses that uncovered actionable business insights and supported data-driven decision making across departments",
-      "Supported successful feature launches and product testing cycles by developing real-time Tableau analytics dashboards that captured internal and customer interactions, providing immediate visibility into adoption metrics and enabling rapid optimization of new capabilities"
+      "Generated comprehensive reports and dashboards analyzing user search behaviors and product engagement patterns using machine learning models and product analytics tools, identifying content gaps and shaping product strategy",
+      "Implemented efficient pipelines for data cleaning and manipulation using Python and SQL, enabling high-value ad-hoc analyses that uncovered actionable business insights",
+      "Supported successful feature launches by developing real-time Tableau analytics dashboards that captured internal and customer interactions, providing visibility into adoption metrics and enabling rapid optimization"
     ],
   },
+  // Gilead
   {
     company: "Gilead Sciences, Inc.",
+    url: "#",
     title: "Data Scientist, Intern",
     timePeriod: "Apr 2020 - Dec 2020",
     location: "Foster City, CA",
     description: [
       "Collaborated with data engineers to develop ETL workflows in Azure Data Factory to analyze over 2 million patient health claims",
-      "Wrote and optimized SQL queries to perform data extraction, developed data processing pipelines using python (Numpy, Pandas) and built ML models with 78% accuracy to identify target patients likely to switch on the new drug and predict quality target of the drug market",
-      "Created effective data visualization dashboards with Tableau and Matplotlib which provided business insights to the sales team for investing in the promotion of the product"
+      "Built machine learning models to identify target patients likely to switch to a new drug and predict drug market potential",
+      "Created data visualization dashboards with Tableau and Matplotlib providing business insights to the sales team for product promotion strategies"
     ],
   },
+  // BioMarin
   {
     company: "BioMarin Pharmaceutical, Inc.",
+    url: "#",
     title: "Data Science Analyst, Intern",
     timePeriod: "Jun 2020 - Sept 2020",
     location: "San Rafael, CA",
     description: [
-      "Led cleaning and processing of data with SQL, Python (Pandas, NumPy) from multiple data sources to a data warehouse",
-      "Conceptualized and implemented PowerBI Dashboards for the leadership team utilizing data to advise on strategic decisions like Promotion, Workforce Diversity, Employee Engagement, Office Capacity Planning, and Attrition",
-      "Independently designed KPIs on operational metrics in Python and PowerBI to analyze the gender and/or ethnicity pay gap"
+      "Led cleaning and processing of data with SQL and Python from multiple sources to a data warehouse",
+      "Implemented PowerBI dashboards to advise leadership on promotions, workforce diversity, employee engagement, office capacity planning, and attrition",
+      "Designed KPIs on operational metrics to analyze gender and ethnicity pay gaps"
     ],
   },
 ];
@@ -131,6 +157,19 @@ const Experience: NextPage = () => {
           Work Experience
         </h2>
 
+        {/* Upgrade Summary */}
+        <div className="mb-12 bg-white dark:bg-dark-card shadow-sm rounded-lg p-6">
+          <p className={`text-sm leading-relaxed mb-3 ${textColorSecondary}`}>
+            I have spent the last four years at Upgrade, growing from Product Analyst to Product Manager 2,
+            driving initiatives across onboarding, cross-sell, fraud, and customer experience in lending and BNPL products.
+          </p>
+          <p className={`text-sm leading-relaxed ${textColorSecondary}`}>
+            Key highlights include leading a company-wide CrossSell initiative, implementing OCR and SMS flows to reduce friction, 
+            and scaling customer servicing, disputes, and fraud workflows with auditability and compliance at the core.
+          </p>
+        </div>
+
+        {/* Full Experiences */}
         <div className="space-y-12">
           {EXPERIENCES.map((experience, index) => (
             <div key={index} className="bg-white dark:bg-dark-card shadow-sm rounded-lg p-6">
@@ -138,7 +177,9 @@ const Experience: NextPage = () => {
                 <div>
                   <h3 className="text-lg font-medium">{experience.title}</h3>
                   <a 
-                    href={`https://${experience.company.toLowerCase().replace(' ', '')}.com`} 
+                    href={experience.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-orange-500 hover:text-orange-600 dark:text-orange-400 dark:hover:text-orange-300 font-medium"
                   >
                     {experience.company}
@@ -189,3 +230,4 @@ const Experience: NextPage = () => {
 };
 
 export default Experience;
+

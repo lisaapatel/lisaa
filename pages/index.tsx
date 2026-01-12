@@ -73,7 +73,7 @@ const Home: NextPage = () => {
           <img
             src="/lisa.jpg"
             alt="Lisa Patel"
-            className="rounded-lg shadow-md w-full max-w-[300px] sm:max-w-[400px]"
+            className="rounded-lg shadow-md w-full max-w-[350px] sm:max-w-[500px]"
           />
         </div>
         

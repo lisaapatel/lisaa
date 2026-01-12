@@ -66,10 +66,8 @@ export function Navigation({ links, title }: UiProps) {
     <nav className="sticky top-0 z-50 bg-white dark:bg-dark-bg border-b border-gray-200 dark:border-gray-800 transition-colors duration-300">
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-16">
-          <Link href="/">
-            <a className="text-xl font-semibold tracking-tight">
-              {title || "Lisa Patel"}
-            </a>
+          <Link href="/" className="text-xl font-semibold tracking-tight">
+            {title || "Lisa Patel"}
           </Link>
           
           {/* Desktop navigation */}
@@ -79,10 +77,8 @@ export function Navigation({ links, title }: UiProps) {
               const href = `/${link}`;
               
               return (
-                <Link key={text} href={href}>
-                  <a className={`text-sm transition-colors duration-200 ${isActive(link)}`}>
-                    {text}
-                  </a>
+                <Link key={text} href={href} className={`text-sm transition-colors duration-200 ${isActive(link)}`}>
+                  {text}
                 </Link>
               );
             })}
@@ -152,10 +148,8 @@ export function Navigation({ links, title }: UiProps) {
               
               return (
                 <li key={text}>
-                  <Link href={href}>
-                    <a className={`block text-lg py-2 ${isActive(link)}`}>
-                      {text}
-                    </a>
+                  <Link href={href} className={`block text-lg py-2 ${isActive(link)}`}>
+                    {text}
                   </Link>
                 </li>
               );

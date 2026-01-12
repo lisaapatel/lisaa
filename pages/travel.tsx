@@ -7,6 +7,22 @@ const Travel: NextPage = () => {
   const { theme } = useTheme();
   const textColorSecondary = theme === 'dark' ? 'text-gray-400' : 'text-gray-600';
 
+  // Array of image filenames
+  const images = [
+    "11.jpg",
+    "4.heic",
+    "10.jpg",
+    "8.jpg",
+    "7.HEIC",
+    "6.HEIC",
+    "1.PNG",
+    "2.HEIC",
+    "5.JPG",
+    "9.JPG",
+    "3.heic",
+    "12.JPG",
+  ];
+
   return (
     <Layout title="Travel - Lisa Patel">
       <Head>
@@ -37,7 +53,23 @@ const Travel: NextPage = () => {
 
         <section>
           <h2 className="text-xl font-semibold mb-4">Travels</h2>
-          <p className={`mb-4 ${textColorSecondary}`}>Beyond the Bay, I&apos;ve had the chance to explore incredible places that have expanded my palate and perspective. Whether itapos;s savoring street food in Southeast Asia or finding hidden gems in European cities, each journey is a new adventure.</p>
+          <p className={`mb-4 ${textColorSecondary}`}>Beyond the Bay, I&apos;ve had the chance to explore incredible places that have expanded my palate and perspective. Whether it&apos;s savoring street food in Southeast Asia or finding hidden gems in European cities, each journey is a new adventure.</p>
+        </section>
+
+        {/* Photo Grid */}
+        <section className="mt-12">
+          <h2 className="text-xl font-semibold mb-4">Photos</h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+            {images.map((img, idx) => (
+              <div key={idx} className="overflow-hidden rounded-lg aspect-square">
+                <img 
+                  src={`/${img}`} 
+                  alt={`Travel photo ${idx + 1}`} 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            ))}
+          </div>
         </section>
       </main>
     </Layout>
@@ -45,3 +77,4 @@ const Travel: NextPage = () => {
 };
 
 export default Travel;
+

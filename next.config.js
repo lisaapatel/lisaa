@@ -8,9 +8,10 @@ const nextConfig = {
   images: {
     unoptimized: true,  // THIS IS CRUCIAL
   },
-  basePath: '/lisaa',        // Adjust for your GitHub repository
-  assetPrefix: '/lisaa/', 
-  trailingSlash: true,   // Adjust for your GitHub repository
+  //
+ // basePath: '/lisaa',        // Adjust for your GitHub repository
+  //assetPrefix: '/lisaa/', 
+  // trailingSlash: true,   // Adjust for your GitHub repository 
 };
 
 module.exports = nextConfig;
