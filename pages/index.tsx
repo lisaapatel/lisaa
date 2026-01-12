@@ -71,7 +71,7 @@ const Home: NextPage = () => {
         
         <div className="my-10 sm:my-16 flex justify-center">
           <img
-            src="/lisa.jpg"
+            src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/lisa.jpg`}
             alt="Lisa Patel"
             className="rounded-lg shadow-md w-full max-w-[350px] sm:max-w-[500px]"
           />

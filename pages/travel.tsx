@@ -7,6 +7,9 @@ const Travel: NextPage = () => {
   const { theme } = useTheme();
   const textColorSecondary = theme === 'dark' ? 'text-gray-400' : 'text-gray-600';
 
+  // Get basePath for image URLs (works with basePath in next.config.js)
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
   // Array of image filenames
   const images = [
     "11.jpg",
@@ -63,7 +66,7 @@ const Travel: NextPage = () => {
             {images.map((img, idx) => (
               <div key={idx} className="overflow-hidden rounded-lg aspect-square">
                 <img 
-                  src={`/${img}`} 
+                  src={`${basePath}/${img}`} 
                   alt={`Travel photo ${idx + 1}`} 
                   className="w-full h-full object-cover"
                 />

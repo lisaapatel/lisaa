@@ -38,9 +38,13 @@ jobs:
         run: cat next.config.js  # Verify the config is correct
 
       - name: Build Next.js
+        env:
+          NEXT_PUBLIC_BASE_PATH: /lisaa
         run: yarn build
 
       - name: Export Next.js
+        env:
+          NEXT_PUBLIC_BASE_PATH: /lisaa
         run: yarn export
 
       - name: Add .nojekyll file
