@@ -12,18 +12,16 @@ const Travel: NextPage = () => {
 
   // Array of image filenames
   const images = [
-    "11.jpg",
-    "4.heic",
-    "10.jpg",
-    "8.jpg",
-    "7.HEIC",
-    "6.HEIC",
     "1.PNG",
-    "2.HEIC",
+    "2.jpg",
+    "3.jpg",
+    "4.jpg",
     "5.JPG",
+    "6.jpg",
+    "7.jpg",
+    "8.jpg",
     "9.JPG",
-    "3.heic",
-    "12.JPG",
+    "10.jpg",
   ];
 
   return (
