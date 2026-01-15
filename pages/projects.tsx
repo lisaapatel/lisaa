@@ -416,17 +416,42 @@ const Projects: NextPage = () => {
 
         <section className="mb-8">
           <h2 className="text-xl font-medium mb-3 text-gray-800 dark:text-gray-200 border-b border-gray-200 dark:border-gray-700 pb-2">Exploration & Creativity</h2>
-          <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-400 mb-3 max-w-3xl">
-            This is where I&apos;ll be sharing some of my latest experiments, creative projects, and cool finds! First up is an article I recently wrote about building a 0-to-1 web app with Cursor.
-          </p>
           
-          <a 
-            href="#" 
-            className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 text-sm group font-medium hover:underline"
-          >
-            <span>Read: Building a 0to1 web app with Cursor</span>
-            <FiArrowRight className="ml-1 w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-          </a>
+          <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-400 mb-6 max-w-3xl">
+            This is where I&apos;ll be sharing some of my latest experiments, creative projects, and cool finds!
+          </p>
+
+          <div className="mb-6">
+            <h3 className="text-base font-semibold mb-2 text-gray-800 dark:text-gray-200">How I Built My Resume</h3>
+            <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-400 mb-3 max-w-3xl">
+              If you&apos;ve reviewed my resume or are reviewing it now, you&apos;ll know I&apos;ve always hated fighting with templates. So I decided to build my own. In this article, I walk through how I created a clean, LaTeX-style, ATS-friendly resume using React, Cursor, and AI tools.
+            </p>
+            <a 
+              href="https://lisaapatel.medium.com/how-i-built-my-own-resume-template-with-react-cursor-and-ai-2b8e0f464678?postPublishedType=initial" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 text-sm group font-medium hover:underline"
+            >
+              <span>Read: How I Built My Resume</span>
+              <FiArrowRight className="ml-1 w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+            </a>
+          </div>
+
+          <div>
+            <h3 className="text-base font-semibold mb-2 text-gray-800 dark:text-gray-200">How I Built a 0-to-1 Web App with Cursor</h3>
+            <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-400 mb-3 max-w-3xl">
+              I wanted to see how fast I could go from idea to working product, so I used Cursor to build a web app from scratch in just a couple of hours.
+            </p>
+            <a 
+              href="#" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 text-sm group font-medium hover:underline"
+            >
+              <span>Read: Building a 0to1 Web App with Cursor</span>
+              <FiArrowRight className="ml-1 w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+            </a>
+          </div>
         </section>
 
         <section>
