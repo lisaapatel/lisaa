@@ -9,15 +9,15 @@ const EXPERIENCES = [
     company: "Upgrade, Inc.",
     url: "https://www.upgrade.com",
     title: "Product Manager 2",
-    timePeriod: "June 2025 - Present",
+    timePeriod: "June 2025 – Present",
     location: "San Francisco, CA",
     description: [
-      "Cross-Sell Strategy & Execution: Co-led a company-wide cross-sell initiative to convert existing Personal Loan and BNPL customers into Home Improvement Loans by defining customer qualification criteria across credit, behavior, and risk signals, partnering with data science, marketing, and leadership to deliver targeted offers across in-app and lifecycle channels, driving a material increase in products per customer and revenue per user",
-      "Monetization & Partner Enablement: Designed cross-sell flows that route qualified customers to third-party partners while maintaining compliance and risk thresholds, unlocking a new revenue stream and establishing a scalable framework for future product expansion",
-      "OCR-Driven Application Optimization: Led integration of OCR into the loan application funnel to reduce borrower friction and manual entry errors by extracting identity data from government-issued IDs, decreasing application completion time and downstream verification steps while improving data accuracy",
-      "Channel Expansion – Apply by Phone: Owned development of an apply-by-phone experience to expand market reach for less tech-savvy customers, aligning product strategy with competitive landscape and operational constraints to support assisted application flows",
-      "Bidirectional SMS Decisioning: Delivered a secure bidirectional SMS flow enabling customers to approve or decline offers directly via text, reducing funnel friction and abandonment while enforcing fraud checks and eligibility controls at each step",
-      "Roadmap & Executive Collaboration: Influenced shared team roadmap planning by prioritizing high-impact initiatives across growth, risk, and user experience, presenting progress and tradeoffs to VP-level stakeholders and influencing prioritization through end-to-end ownership of initiatives"
+      "Cross-Sell Strategy & Monetization: Co-led a company-wide initiative presenting ~2M Personal Loan and BNPL customers with Home Improvement Loan offers by defining eligibility across credit and risk signals. Partnered with internal teams to deliver targeted offers and route qualified customers to partners, unlocking a potential new revenue stream",
+      "OCR-Driven Application Optimization: Led OCR integration in the loan application funnel to reduce borrower friction and manual entry errors, processing ~85K applications. Reduced application completion time and downstream verification steps, while improving data accuracy",
+      "Channel Expansion – Apply by Phone: Owned development of an apply-by-phone experience, expanding assisted application reach by ~5% for less tech-savvy customers",
+      "Bidirectional SMS Decisioning: Delivered a secure bidirectional SMS flow enabling customers to approve or decline offers via text, reducing funnel abandonment while enforcing fraud checks and eligibility controls",
+      "Loan Cancellation Flow: Built end-to-end loan cancellation workflow supporting ~200 cancellations per month, improving customer experience while maintaining operational integrity",
+      "Roadmap & Executive Collaboration: Influenced shared roadmap planning by prioritizing high-impact initiatives across growth, risk, and UX. Presented progress and tradeoffs to VP-level stakeholders and drove end-to-end delivery"
     ],
     
   },
@@ -26,26 +26,27 @@ const EXPERIENCES = [
     company: "Upgrade, Inc.",
     url: "https://www.upgrade.com",
     title: "Product Manager 1",
-    timePeriod: "Jan 2024 - June 2025",
+    timePeriod: "Jan 2024 – June 2025",
     location: "San Francisco, CA",
     description: [
-      "Streamlined Authentication Flow: Redesigned the customer onboarding experience by simplifying authentication flows, eliminating redundant verification steps, and integrating platform links, resulting in 35% faster signups and improved funnel conversion",
-      "Disputes and Refunds Platform: Owned the design and delivery of a scalable disputes and refunds resolution workflow, introducing real-time audit logs, structured documentation, and compliance-ready processes that materially reduced resolution time and improved investor transparency",
-      "Customer Self-Service Capabilities: Delivered high-impact self-service features including hardship program enrollment, payment due date changes, auto-pay enrollment, and an interactive interest savings calculator, improving customer satisfaction while significantly reducing support ticket volume",
-      "Risk-Based Fraud Detection: Partnered with data science to implement risk-based fraud detection rules that intelligently routed suspicious transactions for manual review, reducing fraud losses while maintaining a frictionless experience for trusted customers",
-      "Cross-Functional Product Execution: Drove alignment across engineering, design, legal, compliance, operations, and sales to execute product initiatives, providing clear stakeholder communication and executive-ready updates that accelerated decision-making and delivery"
+      "Internal Customer Support Tools: Delivered internal tooling for support teams to manage hardship enrollments, payment updates, autopay, and post-dispute billing, improving resolution across ~1.5K monthly inquiries and reducing operational ambiguity",
+      "Disputes & Statement Management: Led 0→1 delivery of borrower-facing dispute resolution workflows, including automated emails, post-dispute statement updates, and audit logs, supporting ~500 monthly disputes while significantly reducing resolution time and operational ambiguity",
+      "Streamlined Authentication Flow: For onboarding flow, eliminated redundant verification steps, resulting in 35% faster signups",
+      "Risk-Based Fraud Detection: Partnered with data science to implement intelligent fraud rules, reducing fraud losses while preserving a frictionless experience for trusted customers",
+      "Cross-Functional Product Execution: Drove alignment across engineering, design, legal, compliance, operations, and sales to execute product initiatives efficiently"
     ],
   },
   // Upgrade APM
   {
     company: "Upgrade, Inc.",
     url: "https://www.upgrade.com",
-    title: "APM/Product Analyst",
-    timePeriod: "Aug 2022 - Jan 2024",
+    title: "APM / Product Analyst",
+    timePeriod: "Aug 2022 – Jan 2024",
     location: "San Francisco, CA",
     description: [
-      "Led cross-functional collaboration with engineering and product teams to streamline customer experience through feature development, vendor selection, and detailed product specifications, resulting in measurable improvements in user satisfaction metrics",
-      "Spearheaded comprehensive analytics for Home Improvement Loans portfolio by defining key performance indicators, developing data models, and implementing automated reporting systems that provided actionable insights, improving product health monitoring and driving better user experience"
+      "Pre-Launch Product: Partnered with engineering through blitz testing and iterative releases; translated user feedback into product changes. Built KPI frameworks used by executives to track product health for a B2B2C business scaling to ~$2B in revenue",
+      "Merchant Servicing Platform: Developed an internal merchant servicing center supporting ~2K merchants, enabling case-by-case configuration and operational oversight",
+      "Analytics & Feedback Loops: Led data collection, analysis, and reporting to inform product decisions and improve user experience"
     ],
   },
   // Blitz App
@@ -53,15 +54,13 @@ const EXPERIENCES = [
     company: "Blitz App, Inc.",
     url: "#",
     title: "Product Data Analyst",
-    timePeriod: "Sept 2021 - July 2022",
+    timePeriod: "Sept 2021 – July 2022",
     location: "San Francisco, CA",
     description: [
-      "Cohort Analysis: Analyzed acquisition and behavioral cohorts to identify early retention risks and churn drivers, enabling targeted interventions that improved user retention",
-      "Subscription Analytics: Automated reporting for subscription metrics including MRR, LTV, CAC, and churn, empowering the product team to optimize pricing and increase customer lifetime value",
-      "Data-Driven Product Strategy: Partnered with product teams to compare pro vs non-pro engagement patterns, driving feature improvements that increased pro-tier conversion",
-      "Ad Revenue Optimization: Defined KPIs linking ad revenue to user journey stages, delivering insights that improved ad placement effectiveness and revenue per user",
-      "Executive Reporting & Dashboards: Built executive-facing dashboards that provided real-time visibility into growth and revenue trends, supporting faster and more informed decision-making",
-      "Cross-Functional Analytics Collaboration: Worked across product, engineering, and data teams using SQL, Python, and BI tools to deliver scalable analytics solutions"
+      "Cohort Analysis & Retention: Analyzed acquisition and behavioral cohorts to identify early retention risks and churn drivers, enabling targeted interventions that improved engagement",
+      "Subscription Analytics: Automated MRR, LTV, CAC, and churn reporting, empowering pricing and lifecycle optimization that increased customer lifetime value",
+      "Revenue/Data Infrastructure: Built pipelines processing ~100M rows/day, partnered with product to analyze pro vs non-pro behavior, increasing pro-tier conversion",
+      "Ad Revenue Optimization & Dashboards: Defined KPIs linking ad revenue to user journeys and built executive-facing dashboards for growth and revenue visibility"
     ],
   },
   // Okta
