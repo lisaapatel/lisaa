@@ -45,7 +45,7 @@ const Contact: NextPage = () => {
           </a>
           
           <a 
-            href="https://www.linkedin.com/in/lisapatel98" 
+            href="https://www.linkedin.com/in/lisaapatel/" 
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
@@ -78,7 +78,7 @@ const Contact: NextPage = () => {
           </a>
           
           <a 
-            href="#" 
+            href="https://drive.google.com/file/d/1DgNjCX2A4Rf0XWq68-352GqQ8sIYrefD/view?usp=sharing" 
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
