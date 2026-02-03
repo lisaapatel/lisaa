@@ -443,7 +443,7 @@ const Projects: NextPage = () => {
               I wanted to see how fast I could go from idea to working product, so I used Cursor to build a web app from scratch in just a couple of hours.
             </p>
             <a 
-              href="#" 
+              href="https://lisaapatel.medium.com/building-a-0to1-web-app-with-cursor-product-spectogo-live-in-2hrs-5de4c9fc03c7" 
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 text-sm group font-medium hover:underline"
